@@ -1,0 +1,33 @@
+#if !defined(<*>HEADER_DEFINE<*>)
+#define <*>HEADER_DEFINE<*>
+
+#include "GUICommand.h"
+
+class <*>COMMAND_CLASS_NAME<*> : public CGUICommand
+{
+public:
+    <*>COMMAND_CLASS_NAME<*>();
+
+#if defined(GUILIANI_STREAM_GUI)
+    /** Reads all attributes from streaming file.
+        This method is called by CGUIFactoryManager after one of the registered
+        factories has created an instance of this class.
+    */
+    virtual void ReadFromStream();
+#endif
+
+#if defined(GUILIANI_WRITE_GUI)
+    /** Writes all attributes to the streaming file. A CGUIStreamWriter
+        has to be initialized first.
+        @param bWriteClassID This flag is used to select if writing of command
+               class ID, leading and trailing tags is performed.
+    */
+    virtual void WriteToStream(const eC_Bool bWriteClassID = false);
+#endif
+
+protected:
+    /// Implements the actual command functionality.
+    void Do();
+};
+
+#endif // <*>HEADER_DEFINE<*>

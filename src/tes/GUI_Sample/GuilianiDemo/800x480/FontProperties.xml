@@ -1,0 +1,69 @@
+<!-- GSE workspace file. Do not modify. -->
+<FontProperties>
+<FileVersion>21</FileVersion>
+<FontResourcePropertiesClassVersion>1</FontResourcePropertiesClassVersion>
+<NumberOfSets>1</NumberOfSets>
+<ResourcePropertySet>
+<SetName>Default</SetName>
+</ResourcePropertySet>
+<IDManagerClassVersion>1</IDManagerClassVersion>
+<NumberOfIDs>8</NumberOfIDs>
+<IDnames>
+<ID>HEADER_FNT</ID>
+<IDContent>
+<FontName>BebasNeue Bold.otf</FontName>
+<FontSize>28</FontSize>
+<Style>0</Style>
+<Permanent>false</Permanent>
+</IDContent>
+<ID>MENU_FONT</ID>
+<IDContent>
+<FontName>BebasNeue Book.otf</FontName>
+<FontSize>24</FontSize>
+<Style>0</Style>
+<Permanent>false</Permanent>
+</IDContent>
+<ID>FNT_BEBASNEUE_REGULAR</ID>
+<IDContent>
+<FontName>BebasNeue Regular.otf</FontName>
+<FontSize>20</FontSize>
+<Style>0</Style>
+<Permanent>false</Permanent>
+</IDContent>
+<ID>FNT_BEBASNEUE_BOLD</ID>
+<IDContent>
+<FontName>BebasNeue Bold.otf</FontName>
+<FontSize>20</FontSize>
+<Style>0</Style>
+<Permanent>false</Permanent>
+</IDContent>
+<ID>FNT_BEBASNEUE_ITALIC</ID>
+<IDContent>
+<FontName>BebasNeue Light.otf</FontName>
+<FontSize>20</FontSize>
+<Style>0</Style>
+<Permanent>false</Permanent>
+</IDContent>
+<ID>FNT_BEBASNEUE_BOLD_ITALIC</ID>
+<IDContent>
+<FontName>BebasNeue Book.otf</FontName>
+<FontSize>20</FontSize>
+<Style>0</Style>
+<Permanent>false</Permanent>
+</IDContent>
+<ID>FNT_BEBASNEUE_BOOK</ID>
+<IDContent>
+<FontName>BebasNeue Book.otf</FontName>
+<FontSize>32</FontSize>
+<Style>0</Style>
+<Permanent>false</Permanent>
+</IDContent>
+<ID>FNT_BEBASNEUE_BOLD_WHEEL</ID>
+<IDContent>
+<FontName>BebasNeue Bold.otf</FontName>
+<FontSize>32</FontSize>
+<Style>0</Style>
+<Permanent>false</Permanent>
+</IDContent>
+</IDnames>
+</FontProperties>

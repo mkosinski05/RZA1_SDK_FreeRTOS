@@ -1,0 +1,166 @@
+<!-- GSE workspace file. Do not modify. -->
+<TextProperties>
+<FileVersion>21</FileVersion>
+<TextResourcePropertiesClassVersion>1</TextResourcePropertiesClassVersion>
+<NumberOfSets>2</NumberOfSets>
+<ResourcePropertySet>
+<SetName>English</SetName>
+</ResourcePropertySet>
+<ResourcePropertySet>
+<SetName>German</SetName>
+</ResourcePropertySet>
+<IDManagerClassVersion>1</IDManagerClassVersion>
+<NumberOfIDs>30</NumberOfIDs>
+<IDnames>
+<ID>MAIN_MENU_TEXT</ID>
+<IDContent>
+<Text>Main Menu</Text>
+<Text>Haupt Menü</Text>
+</IDContent>
+<ID>ANIMATION_BUTTON_TXT</ID>
+<IDContent>
+<Text>Animation</Text>
+<Text>Animation</Text>
+</IDContent>
+<ID>SLIDER_BUTTON_TEXT</ID>
+<IDContent>
+<Text>Slider</Text>
+<Text>Schieberegler</Text>
+</IDContent>
+<ID>BUTTONS_BUTTON_TXT</ID>
+<IDContent>
+<Text>Buttons</Text>
+<Text>Knöpfe</Text>
+</IDContent>
+<ID>SETTINGS_BUTTON_TXT</ID>
+<IDContent>
+<Text>Settings</Text>
+<Text>Einstellungen</Text>
+</IDContent>
+<ID>GAUGE_N_WHEEL_BUTTON_TEXT</ID>
+<IDContent>
+<Text>Gauge and Wheel</Text>
+<Text>Pegel und Walze</Text>
+</IDContent>
+<ID>LANG_CHANGE_TEXT</ID>
+<IDContent>
+<Text>German?</Text>
+<Text>Englisch?</Text>
+</IDContent>
+<ID>DARK_IMAGE_SET_TXT</ID>
+<IDContent>
+<Text>Dark Mode?</Text>
+<Text>Dunkle Ansicht?</Text>
+</IDContent>
+<ID>LIGHT_IMAGE_SET_TXT</ID>
+<IDContent>
+<Text>Light Mode?</Text>
+<Text>Helle Ansicht?</Text>
+</IDContent>
+<ID>CAROUSEL_BUTTON_TXT</ID>
+<IDContent>
+<Text>Carousel</Text>
+<Text>Karussell</Text>
+</IDContent>
+<ID>CAROUSEL_MODE</ID>
+<IDContent>
+<Text>Change Mode</Text>
+<Text>Modus wechseln</Text>
+</IDContent>
+<ID>RICH_TEXT</ID>
+<IDContent>
+<Text>One morning, as &lt;b&gt;Gregor Samsa&lt;/b&gt; was &lt;i&gt;waking up from &lt;b&gt;anxious dreams&lt;/b&gt;&lt;/i&gt;, he discovered that in his bed he had been &lt;u&gt;changed into a monstrous verminous bug.&lt;/u&gt; He lay on his &lt;colorFFAA3333&gt;armour-hard&lt;/colorFFAA3333&gt; back and saw, as he lifted his head up a little, his brown, arched abdomen divided up into rigid bow-like sections. From this height the blanket, just about ready to slide off completely, could hardly stay in place. His numerous legs, pitifully thin in comparison to the rest of his circumference, flickered helplessly before his eyes.</Text>
+<Text>Als &lt;b&gt;Gregor Samsa&lt;/b&gt; eines Morgens aus &lt;i&gt; &lt;b&gt;unruhigen Träumen&lt;/b&gt; erwachte&lt;/i&gt;, fand er sich in seinem Bett zu einem &lt;u&gt;ungeheueren Ungeziefer verwandelt.&lt;/u&gt; Er lag auf seinem &lt;colorFFAA3333&gt;panzerartig harten&lt;/colorFFAA3333&gt; Rücken und sah, wenn er den Kopf ein wenig hob, seinen gewölbten, braunen, von bogenförmigen Versteifungen geteilten Bauch, auf dessen Höhe sich die Bettdecke, zum gänzlichen Niedergleiten bereit, kaum noch erhalten konnte. Seine vielen, im Vergleich zu seinem sonstigen Umfang kläglich dünnen Beine flimmerten ihm hilflos vor den Augen.</Text>
+</IDContent>
+<ID>NORMAL_TEXT</ID>
+<IDContent>
+<Text>One morning, as Gregor Samsa was waking up from anxious dreams, he discovered that in his bed he had been changed into a monstrous verminous bug. He lay on his armour-hard back and saw, as he lifted his head up a little, his brown, arched abdomen divided up into rigid bow-like sections. From this height the blanket, just about ready to slide off completely, could hardly stay in place. His numerous legs, pitifully thin in comparison to the rest of his circumference, flickered helplessly before his eyes.</Text>
+<Text>Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in seinem Bett zu einem ungeheueren Ungeziefer verwandelt. Er lag auf seinem panzerartig harten Rücken und sah, wenn er den Kopf ein wenig hob, seinen gewölbten, braunen, von bogenförmigen Versteifungen geteilten Bauch, auf dessen Höhe sich die Bettdecke, zum gänzlichen Niedergleiten bereit, kaum noch erhalten konnte. Seine vielen, im Vergleich zu seinem sonstigen Umfang kläglich dünnen Beine flimmerten ihm hilflos vor den Augen.</Text>
+</IDContent>
+<ID>SCRATCHPAD_TXT</ID>
+<IDContent>
+<Text>Scratchpad</Text>
+<Text>Scratchpad</Text>
+</IDContent>
+<ID>KEYBOARD_TXT</ID>
+<IDContent>
+<Text>Keyboard</Text>
+<Text>Tastatur</Text>
+</IDContent>
+<ID>USER_TXT</ID>
+<IDContent>
+<Text>User:</Text>
+<Text>Benutzer:</Text>
+</IDContent>
+<ID>TOGGLE_TXT</ID>
+<IDContent>
+<Text>visible</Text>
+<Text>sichtbar</Text>
+</IDContent>
+<ID>SCROLL_TXT</ID>
+<IDContent>
+<Text>Toggle Scroll</Text>
+<Text>Scroll Wechseln</Text>
+</IDContent>
+<ID>HIGH_TXT</ID>
+<IDContent>
+<Text>High</Text>
+<Text>Hoch</Text>
+</IDContent>
+<ID>MID_TXT</ID>
+<IDContent>
+<Text>Middle</Text>
+<Text>Mittel</Text>
+</IDContent>
+<ID>LOW_TXT</ID>
+<IDContent>
+<Text>Low</Text>
+<Text>Niedrig</Text>
+</IDContent>
+<ID>INFO_ANIMATION_TXT</ID>
+<IDContent>
+<Text>Guiliani provides numerous different easing types to help you easily advance your application&apos;s dynamic behaviour. Using C++-subclassing, new custom-made easing types can be implemented as well.</Text>
+<Text>Guiliani bietet eine Vielzahl verschiedener Easing-Typen an, die es ermöglichen der Applikation ein dynamisches Verhalten zu geben. Durch Klassenableitung können neue maßgeschneiderte Easing-Typen implementiert werden.</Text>
+</IDContent>
+<ID>INFO_BUTTONS_TXT</ID>
+<IDContent>
+<Text>Guiliani offers standard controls like buttons, checkboxes and radiobuttons, as well as special controls e.g. blendbuttons. All images used within the application can also be changed during runtime when using image sets (see Setting-Screen).</Text>
+<Text>Guiliani bietet sowohl Standard-Controls wie Schaltflächen, Auswahlfelder und Optionsfelder als auch spezielle Controls wie den Blendbutton an. Alle Bilder die innerhalb der Applikation benutzt werden, können während der Laufzeit durch andere Image-Sets ausgetauscht werden (siehe Einstellungen).</Text>
+</IDContent>
+<ID>INFO_SLIDER_TXT</ID>
+<IDContent>
+<Text>Guiliani provides a central data-management, called datapool, which helps you to connect different controls or controls and application logic to share data.</Text>
+<Text>Guiliani bietet ein zentrales Daten-Management an, den Datapool, das verschiedene Controls und Applikationslogik miteinander verbindet, um Daten auszutauschen.</Text>
+</IDContent>
+<ID>INFO_TEXT_TXT</ID>
+<IDContent>
+<Text>Guiliani features standard text as well as rich text. When using TextIDs the language can easily be switched during runtime (see Settings-Screen).</Text>
+<Text>Guiliani verfügt sowohl über Standardtext als auch Rich Text. Durch die Verwendung von TextIDs kann während der Laufzeit einfach die Sprache gewechselt werden.</Text>
+</IDContent>
+<ID>INFO_GAUGE_TXT</ID>
+<IDContent>
+<Text>Guiliani has also special widgets to control and visualise values, like wheels and gauges. Here you can see animated controls which are connected via a datapool. The easing type can be changed in the settings screen.</Text>
+<Text>Guiliani bietet ebenfalls spezielle Widgets an, um Werte zu verändern oder darzustellen, wie zum Beispiel das Wheel oder die Gauge. Dies hier sind animierte Controls, die durch einen Datapool verbunden sind. Das Easing kann in den Einstellungen verändert werden.</Text>
+</IDContent>
+<ID>INFO_CAROUSEL_TXT</ID>
+<IDContent>
+<Text>Guiliani offers various types of navigation for greater amounts of elements like carousels or touchscroll views. The left slider is for tilting, the right one for extension and the bottom one for the number of elements. The button toggles between the different display modes.</Text>
+<Text>Guiliani bietet verschiedene Controls für die Navigation durch große Anzahlen von Elementen an, wie das Carousel oder die Touchscroll-View. Der linke Slider bestimmt den Neigungswinkel, der rechte den Abstand und der untere die Anzahl der Elemente. Der Button schaltet die verschiedenen Anzeige-Modi.</Text>
+</IDContent>
+<ID>INFO_KEYBOARD_TXT</ID>
+<IDContent>
+<Text>Guiliani features a keyboard widget, which can be used to input different information. Here the focussed textfield receives the keyboard input, so extensive form-like inputs can be done.</Text>
+<Text>Guiliani verfügt über ein Tastaturwidget, das benutzt werden kann, um verschiedene Informationen einzugeben. Die Eingabe erfolgt in das fokussierte Textfeld, somit können umfangsreiche Formular-Eingabe realisiert werden.</Text>
+</IDContent>
+<ID>INFO_SCRATCHPAD_TXT</ID>
+<IDContent>
+<Text>Have fun experimenting with Guiliani! Feel free to add new widgets to this dialog by using the editor.</Text>
+<Text>Viel Spaß beim Ausprobieren von Guiliani! Erweitern Sie mit dem Editor diesen Dialog durch neue Widgets. </Text>
+</IDContent>
+<ID>INFO_SETTINGS_TXT</ID>
+<IDContent>
+<Text>Guiliani offers language switching as well as skinning during runtime.</Text>
+<Text>Guiliani bietet sowohl Sprachwechsel als auch unterschiedliches Skinning während der Laufzeit an.</Text>
+</IDContent>
+</IDnames>
+</TextProperties>

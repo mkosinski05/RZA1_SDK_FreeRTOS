@@ -1,0 +1,8 @@
+Howto build a new separate StreamRuntime project:
+
+1.) copy the StreamRuntime folder from your GSE delivery to an arbitrary place on the same drive. 
+2.) open CMakeLists.txt from GSE/projects/cmake/ folder with CMake
+3.) configure the CMake project as you are doing it for other standard GSE projects. 
+4.) As a last step, enter at the entry of GSE_ROOT_PATH_STREAMRUNTIME the path to your copy of the StreamRuntime folder.
+
+After configuring and generating the CMake project, the StreamRuntime can be built as usual.
