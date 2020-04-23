@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-/W3C/DTD XHTML 1.0 Transitional/EN" "http:/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http:/www.w3.org/1999/xhtml">
+    <head>
+        <title>RZ/A1LU Software Package | Renesas Electronics Europe</title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta content="revealtrans(duration=0.01, transition(8))" http-equiv="Page-Enter">
+        <meta content="revealtrans(duration=0.01, transition(8))" http-equiv="Page-Exit">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta content="text/css" http-equiv="Content-Style-Type">
+        <meta content="text/javascript" http-equiv="Content-Script-Type">
+        <LINK rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+            <LINK rel="icon" type="image/x-icon" href="images/favicon.ico">
+                <LINK rel="stylesheet" type="text/css" href="scripts/base.css">
+                    <LINK rel="stylesheet" type="text/css" href="scripts/structure.css">
+                        <LINK rel="stylesheet" type="text/css" href="scripts/module.css">
+                            <LINK rel="stylesheet" type="text/css" href="scripts/highslide.css">
+                                <LINK rel="stylesheet" type="text/css" href="scripts/hs_custom.css">
+                                    <script src="scripts/callFunc.js"></script>
+                                    <script src="scripts/dateStamp.js"></script>
+                                    <script src="scripts/ms_test.js"></script>
+                                    <script type="text/javascript">
+    function pageLoad()
+    {
+        // Load the explorer division
+        callFunc('ms_explore', 'ms_explore.cgi', 'onLoad');
+        // Start refresh of the disk test division
+        MsTestScreenUpdate();
+        // Start the date stamp
+        DateStampScreenUpdate();
+    }
+                                    </script>
+    </head>
+    <body onload="pageLoad()">
+        <div id="allWrap">
+            <div id="siteHeader">
+                <!-- headerNav -->
+                <div id="headerNav">
+                    <div class="corpInfoNav">
+                        <ul>
+                            <li>
+                                <a href="http://www.renesas.eu/comp/">About Renesas</a>
+                            </li>
+                            <li>
+                                <a href="http://www.renesas.eu/press/">Press Center</a>
+                            </li>
+                            <li>
+                                <a href="http://www.renesas.eu/event/">Events</a>
+                            </li>
+                            <li>
+                                <a href="http://www.renesas.eu/career/">Careers</a>
+                            </li>
+                            <li>
+                                <a href="http://www.renesas.eu/ir/">Investor Relations</a>
+                            </li>
+                            <li>
+                                <a href="http://www.renesas.eu/contact/">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /headerNav -->
+                <!-- logoSearch -->
+                <div id="logoSearch">
+                    <div class="companyLogo"><a><IMG alt="Renesas" src="images/logo.jpg" width="192" height="32"></a></div>
+                    <div class="boxTitle" align="right">
+					<h1 class="companyLogoText"><strong>RZA1LU Software Package</strong></h1>
+                    </div>
+                </div>
+                <!-- /logoSearch -->
+                <div id="globalNav">
+                    <ul>
+                        <li>
+                            <A href="index.html">Welcome</A>
+                        </li>
+                        <li class="selected">
+                            <A href="mass_storage.html">Mass Storage</A>
+                        </li>
+                        <li>
+                            <A href="admin.html">Administration</A>
+                        </li>
+                    </ul>
+                </div>
+                <!-- contentsHeader -->
+                <div id="contentsHeader">
+                    <div id="contentsTitle">
+                        <div class="breadcrumbs">
+                            <div class="breadcrumb_link">Mass Storage /</div>
+                        </div>
+                        <h1><span class="selected">Software Package</span></h1>
+                    </div>
+                </div>
+                <!-- /contentsHeader --></div>
+            <div id="contentsWrap">
+                <div id="mainBody">
+                    <div class="body_container">
+                        <div class="body_box">
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <!-- contentsLeft -->
+                    <div id="contentsLeft">
+                        <!-- localNav -->
+                        <div id="localNav">
+                            <ul>
+                                <li class="selected">
+                                    Mass Storage
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /localNav -->
+                        <div class="rcBox_grayBorder">
+                            <div class="boxTop"></div>
+                            <div class="innerBox">
+                                <p class="boxTitle pb05">Today:</p>
+                                <div id="realTimeClock"></div>
+                                <p class="dotLineTop"></p>
+                                <p class="boxTitle pb05">Measure the Read/Write speed of a USB Mass Storage device.</p>
+                                <p>Select the drive letter and test size from the drop down lists below. Then click the test button to start the test:</p>
+                                <form method="get" name="ms_test_drive"ID="ms_test_form">
+                                    <div align="right"><select onchange="msSetDrive(this.form)" size="1" name="test_drive" ID="Select1">
+                                            <option selected>
+                                            A<option>
+                                            B<option>
+                                            C<option>
+                                            D<option>
+                                            E<option>
+                                            F<option>
+                                            G<option>
+                                            H<option>
+                                            I<option>
+                                            J<option>
+                                            K<option>
+                                            L<option>
+                                            M<option>
+                                            N<option>
+                                            O<option>
+                                            P<option>
+                                            Q<option>
+                                            R<option>
+                                            S<option>
+                                            T<option>
+                                            U<option>
+                                            V<option>
+                                            W<option>
+                                            X<option>
+                                            Y<option>
+                                            Z</option>
+                                        </select>
+                                      <select onchange="msSetTestSize(this.form)" size="1" name="test_size">
+                                        <option selected="selected"> 1M</option>
+                                        <option> 2M</option>
+                                        <option> 3M</option>
+                                        <option> 4M</option>
+                                        <option> 5M</option>
+                                        <option> 6M</option>
+                                        <option> 7M</option>
+                                        <option> 8M</option>
+                                        <option> 9M</option>
+                                        <option> 10M</option>
+                                        <option> 11M</option>
+                                        <option> 12M</option>
+                                        <option> 13M</option>
+                                        <option> 14M</option>
+                                        <option> 15M</option>
+                                        <option> 16M</option>
+                                        <option> 17M</option>
+                                        <option> 18M</option>
+                                        <option> 19M</option>
+                                        <option>20M</option>
+                                      </select>
+                                    </div>
+                                </form>
+                                <p class="dotLineTop"></p>
+                                <div align="center"><input onclick="msTestStart()" value=" Test " type="button" ID="Button1" NAME="Button1">
+                                <p class="dotLineTop"></p>
+                                </div>
+                                <div id="ms_test">
+                                </div>
+                            </div>
+                            <div class="boxBottom"></div>
+                        </div>
+                    </div>
+                    <!-- contentsLeft -->
+                    <!-- contentsMain -->
+                    <div id="contentsMain">
+                        <table border="0" cellPadding="0" width="100%">
+                            <tr>
+                                <td>You can browse through a USB memory stick. Simply insert the USB memory stick 
+                                    into the USB port (CN2) on the RZ/A1LU Stream-it! board. Using the browser below, 
+                                    choose from the disk icons on the top to select the logical drive. Click the 
+                                    folder links to navigate the directories. Click on the heading links to select 
+                                    the list sorting method. Files can be served or downloaded depending on the 
+                                    type.</td>
+                                <td><IMG src="images/usbstick.jpg" width="100" height="77"></td>
+                            </tr>
+                        </table>
+                        <div class="column1Block">
+                            <h2>USB Mass Storage Explorer</h2>
+                            <!-- explorer -->
+                            <div style="WIDTH: 585px; HEIGHT: 330px; OVERFLOW: auto; align: right" id="explorer"
+                                class="inner">
+                                <div id="ms_explore" class="content"></div>
+                                <!-- explorer --></div>
+                        </div>
+                        <div class="backToTop mt30"><!-- /contentsMain -->
+                            <!-- contentsRight --> <!-- /contentsRight --></div>
+                    </div>
+                </div>
+            </div>
+	<div id="footer">
+		<p>&copy; 2018 Renesas Electronics Corporation.	All	rights reserved.</p>
+	</div>
+        </div>
+    </body>
+</html>

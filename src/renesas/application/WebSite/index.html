@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-/W3C/DTD XHTML 1.0 Transitional/EN"	"http:/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http:/www.w3.org/1999/xhtml" lang="en"	xml:lang="en"><head><meta http-equiv="Content-Type"	content="text/html;	charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Page-Enter" content="revealtrans(duration=0.01, transition(8))" />
+    <meta http-equiv="Page-Exit" content="revealtrans(duration=0.01, transition(8))" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+    <title>RZ/A1LU Software Package | Renesas Electronics Europe</title>
+	<link rel="shortcut	icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="scripts/base.css">
+	<link rel="stylesheet" type="text/css" href="scripts/structure.css">
+	<link rel="stylesheet" type="text/css" href="scripts/module.css">
+	<link rel="stylesheet" type="text/css" href="scripts/highslide.css">
+	<link rel="stylesheet" type="text/css" href="scripts/hs_custom.css">
+	<script	src="scripts/callFunc.js"></script>
+	<script	src="scripts/dateStamp.js"></script>
+	<!--[if	IE]><script	language="javascript" type="text/javascript" src="scripts/excanvas.min.js"></script><![endif]-->
+	<script	src="scripts/jquery.js"></script>
+	<script	src="scripts/jquery.flot.js"></script>
+	<script	type="text/javascript">
+	function pageLoad()
+	{
+		// Load the LED content
+		callFunc('ledCheckBox', 'led_ctrl.cgi', 'onLoad');
+		// Start the date stamp
+		DateStampScreenUpdate();
+	}
+	</script>
+</head>
+<body onLoad="pageLoad()">
+<div id="allWrap">
+	<div id="siteHeader">
+	<!-- headerNav -->
+	<div id="headerNav">
+		<div class="corpInfoNav">
+			<ul>
+				<li><a href="http://www.renesas.eu/comp/">About	Renesas</a></li>
+				<li><a href="http://www.renesas.eu/press/">Press Center</a></li>
+				<li><a href="http://www.renesas.eu/event/">Events</a></li>
+				<li><a href="http://www.renesas.eu/career/">Careers</a></li>
+				<li><a href="http://www.renesas.eu/ir/">Investor Relations</a></li>
+				<li><a href="http://www.renesas.eu/contact/">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /headerNav	-->
+	<!-- logoSearch	-->
+	<div id="logoSearch">
+		<div class="companyLogo"><a><img src="images/logo.jpg" width="192" height="32" alt="Renesas"></a></div>
+		<div align="right" class="boxTitle">
+        <h1 class="companyLogoText"><strong>RZA1LU Software Package</strong></h1>
+		</div>
+	</div>
+	<!-- /logoSearch -->
+	<div id="globalNav">
+		<ul>
+		<li	class="selected"><a	href="index.html">Welcome</a></li>
+		<li><a href="mass_storage.html">Mass Storage</a></li>
+		<li><a href="admin.html">Administration</a></li>
+		</ul>
+	</div>
+	<!-- contentsHeader	-->
+	<div id="contentsHeader">
+		<div id="contentsTitle">
+			<div class="breadcrumbs">
+			<div class="breadcrumb_link">Welcome /</div>
+		</div>
+			<h1><span class="selected">Software Package</span></h1>
+		</div>
+	</div>
+	<!-- /contentsHeader -->
+	</div>
+	<div id="contentsWrap">
+	<div id="mainBody">
+		<div class="body_container"><div class="body_box">
+	<div class="clear"></div>
+	</div></div>
+	<!-- contentsLeft -->
+	<div id="contentsLeft">
+		<!-- localNav -->
+		<div id="localNav">
+			<ul>
+				<li	class="selected">Welcome</li>
+			</ul>
+		</div>
+		<!-- /localNav -->
+		
+		<div class="rcBox_grayBorder">
+			<div class="boxTop"></div>
+			<div class="innerBox">
+			<p class="boxTitle pb05">Today:</p>
+			<div id="realTimeClock">
+			</div>
+			<p class="dotLineTop"></p>
+			<p class="boxTitle pb05">Control LED:</p>
+			<div id="ledCheckBox">
+			</div>
+			</div>
+			<div class="boxBottom"></div>
+		</div>
+		
+		<div class="rcBox_grayBorder">
+			<div class="boxTop"></div>
+			<div class="innerBox">
+				<p class="boxTitle">Related	Content</p>
+				<ul	class="arrowL">
+					<li><a href="http://www.renesas.eu/tool/">Development Tools</a></li>
+					<li><a href="http://www.renesas.eu/supp/e_learning/">e-Learning</a></li>
+					<li><a href="http://www.renesas.eu/company_info/news_and_events/events/events_index.jsp">Seminars</a></li>
+				</ul>
+			</div>
+			<div class="boxBottom"></div>
+		</div>
+		
+	</div>
+	<!-- contentsLeft -->
+
+	<!-- contentsMain -->
+	<div id="contentsMain">
+
+		<p><table width="100%"  border="0" cellpadding="0">
+          <tr>
+            <td><p>Welcome to the Renesas Software Package!</p>
+              <p>A demonstration of how open sources <a href="http://elm-chan.org/fsw/ff/00index_e.html" target="_blank">FATFS</a>, <a href="http://savannah.nongnu.org/projects/lwip/" target="_blank">lwIP</a> and <a href="http://www.codeproject.com/KB/IP/webio.aspx" target="_blank">Webio</a> can be combined with Renesas peripheral drivers to kick start your project. The Software Package shows how easy it is to create a professional, user-friendly and platform-independent user interface for your product. <a	href="http://en.wikipedia.org/wiki/Ajax_(programming) " target="_blank">AJAX</a> technology is used to dynamically update portions of the web pages, <span class="755092515-07012011"><span 
+style="WIDOWS: 2; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; BORDER-COLLAPSE: separate; FONT: medium 'Times New Roman'; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" 
+class="Apple-style-span"><span 
+style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: rgb(51,51,51); FONT-SIZE: 11px" 
+class="Apple-style-span">making it ideal for remote monitoring and industrial control applications including building automation</span></span></span>. </p>
+              <p>The entire application source code is included in the workspace enabling the Software Package to be ported to the platform of your choice. With its vast selection of on chip peripherals and a large number of <a	href="http://www.renesas.eu/prod/mcumpu/" target="_blank">8/16/32 bit processors,</a> Renesas can provide the best solution for your application.</p>
+              <p>This demonstration has been created for the RZ/A1LU and is hosted on the RZ/A1LU Stream-It! Platform; illustrated here.</p></td>
+            <td><div align="center"><img src="images/board.jpg" width="100%" height="100%" /><br />
+              RZ/A1LU Stream-it!</div></td>
+          </tr>
+        </table></p>
+		<div class="column1Block">
+		<h2>SDK for Camera</h2>
+			<div class="inner">
+				<p>SDK for Camera is an application for HMI software development that provides consistent support for camera input, LCD output, and image adjustment.<br>
+Easily make image quality and LCD timing adjustments by cooperating with <a href="https://www.renesas.com/en-eu/products/software-tools/tools/solution-toolkit/qe-qe-for-video-display-controller-5.html" target="_blank">QE for Video Display Controller 5</a> (e² studio plug-in)<br>
+These features will support user development strongly.</p>
+			</div>
+		</div>
+
+		<div class="column1Block">
+		<h2>Guiliani SDK - HMI Framework for smart touch display interfaces</h2>
+			<div class="inner">
+				<p>The C++ HMI Framework "Guiliani" by TES Electronic Solutions allows rapid implementations of smooth, intuitive and high-performance GUIs on cost and energy efficient embedded devices. The <a href="https://www.guiliani.de/mediawiki/index.php?title=Downloads:EvalKits" target="_blank">Guiliani SDK for RZ/A1LU</a> is perfectly optimized for the RZ/A1LU processor and includes the WYSIWYG PC Editor "GSE", example GUI applications and everything else you need to set up your own project and create stunning GUIs.  Furthermore, a world-wide, unlimited and perpetual production-license for Guiliani-Lite is offered free-of-charge via the <a href="https://www.renesas.com/en-eu/products/microcontrollers-microprocessors/rz/rza/tes-guiliani.html"  target="_blank">"Prepaid by Renesas" program</a>.
+			</div>
+		</div>
+
+		<div class="column1Block">
+		<h2>TCP/IP</h2>
+			<div class="inner">
+				<p>The <a href="http://savannah.nongnu.org/projects/lwip/" target="_blank">lwIP</a>	lightweight	TCP/IP protocol	stack  is used to provide the industry standard	<a href="http://pubs.opengroup.org/onlinepubs/007908799/xnsix.html" target="_blank">BSD	socket API</a>.	This API is	then used  to support the <a href="http://www.codeproject.com/KB/IP/webio.aspx" target="_blank">Webio</a> embedded web server. For applications	that require remote	 administration	a command console is available via a passive telnet	client.	 Configuration instructions	for	HyperTerminal and <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank">PuTTY</a> can be found <a href="#">here</a>.</p>
+			</div>
+		</div>
+
+		<div class="column1Block">
+		<h2>USB	2.0	High Speed Host	Controller</h2>
+			<div class="inner">
+				<p>The Renesas USB host	controller driver stack	provides access	to mass	storage, human interface and a limited number of audio class devices. The open source FAT12/16/32 filing system	<a href="http://elm-chan.org/fsw/ff/00index_e.html" target="_blank">FATFS</a> can be linked	into the project for evaluation	of file	IO using the <a	href="http://pubs.opengroup.org/onlinepubs/7990989775/xsh/stdio.h.html" target="_blank">standard file API</a>.</p>
+			</div>
+		</div>
+
+		<div class="column1Block">
+		<h2>Nanix</h2>
+			<div class="inner">
+				<p>The use of industry standard	API's is combined with the infrastructure to support device	drivers	and	a pre-emptive	multitasking kernel creates a <a href="http://en.wikipedia.org/wiki/Nano-" target="_blank">nano-sized</a> UNIX	like environment. Embedded systems often have limited resources	with varying performance characteristics. To support these requirements	the	<a href="Scheduler_Formatted_AppNote.pdf">task control, timer	and	memory management APIs</a> differs significantly from <a href="http://en.wikipedia.org/wiki/Unix" target="_blank">UNIX</a>.</p>
+			</div>
+		</div>
+<div class="backToTop mt30"><!-- /contentsMain -->
+	<!-- contentsRight --><!-- /contentsRight --> </div>
+	</div>
+	</div>
+	</div>
+	<div id="footer">
+		<p>&copy; 2018 Renesas Electronics Corporation.	All	rights reserved.</p>
+	</div>
+</div>
+</body>

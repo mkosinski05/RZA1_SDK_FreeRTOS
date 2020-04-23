@@ -1,0 +1,640 @@
+<Images>
+<FileVersion>1</FileVersion>
+<IDofFirstImage>-48</IDofFirstImage>
+<ImageCount>127</ImageCount>
+<Image>
+<ImagePath>images/Standard/FakeMouseCursor.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -48</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/GaugeNeedle.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -47</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/Gauge.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -46</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -45</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -44</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -43</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonGrayedout.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -42</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonStandard.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -41</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/InputFieldStandard.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -40</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/InputFieldHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -39</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/InputFieldFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -38</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/InputFieldGrayedout.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -37</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/PlaceHolder.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -36</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -35</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -34</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -33</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -32</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonGrayedout.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -31</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonStandard.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -30</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -29</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -28</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -27</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonGrayedout.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -26</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonStandard.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -25</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/SliderNormalBG.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -24</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/SliderNormalKnob.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -23</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/SliderHighlightedKnob.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -22</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/SliderPressedKnob.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -21</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBSelectedFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -20</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBSelectedHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -19</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBSelectedPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -18</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBSelectedNormal.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -17</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBSelectedGrayedOut.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -16</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBNotSelectedFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -15</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBNotSelectedHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -14</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBNotSelectedPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -13</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBNotSelectedNormal.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -12</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBNotSelectedGrayedOut.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -11</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxNotSelectedFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -10</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxNotSelectedHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -9</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxNotSelectedPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -8</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxNotSelectedNormal.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -7</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxNotSelectedGrayedOut.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -6</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxSelectedFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -5</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxSelectedHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -4</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxSelectedPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -3</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxSelectedNormal.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -2</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxSelectedGrayedOut.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -1</Comment>
+</Image>
+<Image>
+<ImagePath></ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID 0</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Animation.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_ANIMATION 1</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Back.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_BACK 2</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Buttons.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_BUTTONS 3</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Carousel.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CAROUSEL 4</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/GaugeAndWheel.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_GAUGEANDWHEEL 5</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Knob.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_KNOB 6</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ProgressFG_Hori.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_PROGRESSFG_HORI 7</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ProgressFG_Vert.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_PROGRESSFG_VERT 8</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Settings.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SETTINGS 9</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Slider.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SLIDER 10</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/SliderHori.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SLIDERHORI 11</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/SliderVerti.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SLIDERVERTI 12</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Text.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_TEXT 13</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Wheel_BG.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_WHEEL_BG 14</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/BackgroundImage.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_BACKGROUNDIMAGE 15</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/EasingButton.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_EASINGBUTTON 16</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/EasingButton_F.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_EASINGBUTTON_F 17</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/EasingButton_G.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_EASINGBUTTON_G 18</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/EasingButton_H.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_EASINGBUTTON_H 19</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/EasingButton_P.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_EASINGBUTTON_P 20</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ProgressBG.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_PROGRESSBG 21</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Button.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_BUTTON 22</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Button_F.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_BUTTON_F 23</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Button_H.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_BUTTON_H 24</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Button_P.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_BUTTON_P 25</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ButtonDown.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_BUTTONDOWN 26</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ButtonUp.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_BUTTONUP 27</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/SliderBar.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SLIDERBAR 28</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ScrollSlider.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SCROLLSLIDER 29</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/AnimatableObject.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_ANIMATABLEOBJECT 30</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/CarouselImg.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CAROUSELIMG 31</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Needle.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_NEEDLE 32</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/GaugeNew.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CUSTOM_GAUGE 33</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/TextInput.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_TEXTINPUT 34</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/TextInput_H.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_TEXTINPUT_H 35</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/TextInput_P.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_TEXTINPUT_P 36</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Key_P.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_KEY_P 37</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Key_H.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_KEY_H 38</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Key.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_KEY 39</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Keyboard.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_KEYBOARD 40</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Scratchpad.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SCRATCHPAD 41</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ComboButton.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_COMBOBUTTON 42</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ComboButton_H.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_COMBOBUTTON_H 43</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ComboButton_P.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_COMBOBUTTON_P 44</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ComboText.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_COMBOTEXT 45</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ComboText_H.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_COMBOTEXT_H 46</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/ComboText_P.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_COMBOTEXT_P 47</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/Info.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_INFO 48</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/guiliani_demo_background_native.png</ImagePath>
+<Permanent>true</Permanent>
+<Comment>IMG_GUILIANI_DEMO_BACKGROUND_NATIVE 49</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/guiliani_demo_background_raw.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_GUILIANI_DEMO_BACKGROUND_RAW 50</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/guiliani_demo_background_rle.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_GUILIANI_DEMO_BACKGROUND_RLE 51</Comment>
+</Image>
+<Image>
+<ImagePath>images/top_bar.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_TOP_BAR 52</Comment>
+</Image>
+<Image>
+<ImagePath>images/bottom_bar.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_BOTTOM_BAR 53</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/checkbox_blue_notselected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CHECKBOX_BLUE_NOTSELECTED 54</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/checkbox_blue_selected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CHECKBOX_BLUE_SELECTED 55</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/checkbox_gray_notselected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CHECKBOX_GRAY_NOTSELECTED 56</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/checkbox_gray_selected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CHECKBOX_GRAY_SELECTED 57</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/checkbox_green_notselected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CHECKBOX_GREEN_NOTSELECTED 58</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/checkbox_green_selected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CHECKBOX_GREEN_SELECTED 59</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/radiobutton_blue_notselected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_RADIOBUTTON_BLUE_NOTSELECTED 60</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/radiobutton_blue_selected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_RADIOBUTTON_BLUE_SELECTED 61</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/radiobutton_gray_notselected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_RADIOBUTTON_GRAY_NOTSELECTED 62</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/radiobutton_gray_selected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_RADIOBUTTON_GRAY_SELECTED 63</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/radiobutton_green_notselected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_RADIOBUTTON_GREEN_NOTSELECTED 64</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/radiobutton_green_selected.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_RADIOBUTTON_GREEN_SELECTED 65</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/switch_blue_off.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SWITCH_BLUE_OFF 66</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/switch_blue_on.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SWITCH_BLUE_ON 67</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/switch_gray_off.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SWITCH_GRAY_OFF 68</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/switch_gray_on.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SWITCH_GRAY_ON 69</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/switch_green_off.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SWITCH_GREEN_OFF 70</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/switch_green_on.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_SWITCH_GREEN_ON 71</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/round_button_hover_blue.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_ROUND_BUTTON_HOVER_BLUE 72</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/round_button_pressed_green.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_ROUND_BUTTON_PRESSED_GREEN 73</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/round_button_std_gray.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_ROUND_BUTTON_STD_GRAY 74</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/CarouselImg2.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CAROUSELIMG2 75</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/CarouselImg3.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CAROUSELIMG3 76</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/CarouselImg4.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CAROUSELIMG4 77</Comment>
+</Image>
+<Image>
+<ImagePath>images/Dark/CarouselImg5.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_CAROUSELIMG5 78</Comment>
+</Image>
+</Images>

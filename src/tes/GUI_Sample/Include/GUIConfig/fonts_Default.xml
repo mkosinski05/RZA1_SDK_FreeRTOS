@@ -1,0 +1,82 @@
+<Fonts>
+<FileVersion>1</FileVersion>
+<IDofFirstFont>-2</IDofFirstFont>
+<FontCount>11</FontCount>
+<Font>
+<FontPath>fonts/Standard/DejaVuSans.ttf</FontPath>
+<FontSize>18</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>true</Permanent>
+<Comment>FontID -2</Comment>
+</Font>
+<Font>
+<FontPath>fonts/Standard/OpenSans-Regular.ttf</FontPath>
+<FontSize>12</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>true</Permanent>
+<Comment>FontID -1</Comment>
+</Font>
+<Font>
+<FontPath></FontPath>
+<FontSize>0</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>true</Permanent>
+<Comment>FontID 0</Comment>
+</Font>
+<Font>
+<FontPath>fonts/BebasNeue Bold.otf</FontPath>
+<FontSize>28</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>false</Permanent>
+<Comment>HEADER_FNT 1</Comment>
+</Font>
+<Font>
+<FontPath>fonts/BebasNeue Book.otf</FontPath>
+<FontSize>24</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>false</Permanent>
+<Comment>MENU_FONT 2</Comment>
+</Font>
+<Font>
+<FontPath>fonts/BebasNeue Regular.otf</FontPath>
+<FontSize>20</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>false</Permanent>
+<Comment>FNT_BEBASNEUE_REGULAR 3</Comment>
+</Font>
+<Font>
+<FontPath>fonts/BebasNeue Bold.otf</FontPath>
+<FontSize>20</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>false</Permanent>
+<Comment>FNT_BEBASNEUE_BOLD 4</Comment>
+</Font>
+<Font>
+<FontPath>fonts/BebasNeue Light.otf</FontPath>
+<FontSize>20</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>false</Permanent>
+<Comment>FNT_BEBASNEUE_ITALIC 5</Comment>
+</Font>
+<Font>
+<FontPath>fonts/BebasNeue Book.otf</FontPath>
+<FontSize>20</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>false</Permanent>
+<Comment>FNT_BEBASNEUE_BOLD_ITALIC 6</Comment>
+</Font>
+<Font>
+<FontPath>fonts/BebasNeue Book.otf</FontPath>
+<FontSize>32</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>false</Permanent>
+<Comment>FNT_BEBASNEUE_BOOK 7</Comment>
+</Font>
+<Font>
+<FontPath>fonts/BebasNeue Bold.otf</FontPath>
+<FontSize>32</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>false</Permanent>
+<Comment>FNT_BEBASNEUE_BOLD_WHEEL 8</Comment>
+</Font>
+</Fonts>

@@ -1,0 +1,671 @@
+﻿Quit
+Select
+Cancel
+Add image
+Remove image
+OK
+Close
+Yes
+No
+image-ID:
+filename:
+Resource text test 1
+File
+Edit
+View
+Layout
+Resources
+Custom Extensions
+Windows
+Help
+New Project…
+New Dialog…
+Open Project…
+Recent Projects
+Open Dialog…
+Import file
+Save Project
+Save Project As…
+Settings…
+Run Simulation…
+Quit
+Close Project
+Close Dialog Window
+Undo
+Redo
+Copy
+Cut
+Paste
+Delete
+Select All
+Find
+Zoom In
+Zoom Out
+Show Reference Lines
+Hide Reference Lines
+Toggle Grid
+Arrange Objects
+Align Objects
+Group
+Ungroup
+Scale Objects to the same Size
+Raise One Layer
+Lower One Layer
+Bring to Foreground
+Send to Background
+Align Left
+Align Right
+Align Top
+Align Bottom
+Center Vertically
+Center Horizontally
+Unify Object Dimensions
+Resize Object to Image
+Distribute Vertically
+Distribute Horizontally
+Manage
+Images…
+Texts…
+Fonts…
+Sounds…
+General Resources…
+DataPool…
+Requirements…
+Export…
+Import…
+Find Unused Resource-IDs
+Create Custom Extension…
+Generate Custom StandardFactory
+Show Controls Window
+Show Dialoglist Window
+Show Object Hierarchy Window
+Show Attributes Window
+Show Workspace Window
+Show Console Window
+Auto-Arrange Windows
+Show Animations Window
+Show Welcome Screen
+Resize Object to Dimensions of its First Image
+Duplicate Object
+Toggle Guide Lines
+Toggle Grid
+Toggle SnapToGuides
+Toggle Coords/Size
+About Guiliani Streaming Editor…
+Documentation…
+GSE failed to open help file
+CHM viewer could not be opened: 
+Not implemented on this platform
+The GUILIANI help file was not found.\nPlease make sure that "
+" is located in\n\n
+
+Create new dialog
+Dialog name:
+use recent Format
+Template:
+Width:
+Height:
+Save as template
+Remove template
+pixels
+Search in Dialog
+Search for
+Search for value
+Search in 
+in current dialog
+in all dialogs
+Find
+Match attribute name
+Search Object ID
+Search Text:
+Scope:
+Global
+Current Dialog
+Children of selection
+Object ID
+Dialog
+Child 
+Search result invalid
+The object was not found. It seems like the dialog was modified since it was searched.
+Please save the dialog and search again!
+No results.
+No results found.
+Missing attribute name
+Please enter a valid attribute name.
+Invalid value
+Please set a valid value in the search field.
+Find unused resource-IDs
+Find unused
+Delete all
+Delete selected
+Import language
+Import language (*.txt or *.lng):
+Import sets of languages (from *.csv)
+Import into set with name:
+(Set permission to override existing languages in project settings)
+Load from file:
+Languages
+A language with the entered name already exists.
+The language
+will not be overriden as stated in project settings.
+Language filename missing.
+Export languages
+Export a language set:
+Export all sets of languages
+Save languages as:
+(The chosen separator can be changed in the project settings)
+Languages
+Language filename missing.
+No folder was chosen.
+text-ID
+German
+English
+French
+Manage Sets
+Manage Image Sets
+Manage Font Sets
+Manage Sound Sets
+Manage General Resource Sets
+Manage Language Sets
+Create Set
+Delete Set
+Rename Set
+Create
+Delete
+Rename
+Copy from selected Set
+Name of new Set:
+New name of Set:
+Copy resources from:
+Choose Set to remove:
+Choose Set to rename:
+Insert new font-ID
+Filename:
+New font-ID:
+Size:
+Object Hierarchy
+object-ID / Type
+Visible
+Attach to…
+Show entire dialog
+Zoom into dialog
+Attributes
+Attribute
+Value
+(click to add more)
+Only numbers are allowed in this Input Field
+Only integer numbers are allowed in this Input Field
+Animations
+Grab attribute start value of interpolation
+Attribute animation on/off
+Grab attribute target value of interpolation
+New animation chain
+Delete animation
+Select animated object
+Activate/Deactivate preview for this animation 
+New animation
+Zoom in
+Zoom out
+Delete animation chain
+Controls
+Global settings
+Project settings
+Settings3
+Settings4
+Settings5
+Project directory:
+Help directory:
+GSE language file:
+Language File Error
+Error on changing the Language File. Either the file does not exist or it is corrupt.
+CHM-Viewer:
+Auto-open console in case of errors
+Never delete/cleanup workspace temp directory
+Import directory:
+Import/Export languages:
+Language separator in .csv file
+Overwrite existing languages during import
+The import directory must not be empty!
+Detect corrupted dialogs
+All dialogs will be checked during load. This may slow down loading process.
+Grid Size:
+Horizontal:
+Vertical:
+Avoid copying unchanged files during "export" and "run simulation".
+Endianess and alignment for binary files during export
+Default export-format for images:
+Reset export-format
+Req #
+Req-ID
+Req text
+Dialog-ID
+Object-ID
+Affected Reqs
+Requirements…
+New
+Edit
+Delete
+Show
+Export
+Export requirements…
+Do you really want to export the requirements into 'Requirements.csv'? If it exists it will be overwritten!
+Requirements successfully saved into 'Requirements.csv'.
+Project has unsaved changes
+If you do not save now, the list of object-IDs might be wrong.\nDo you want to save the project before opening the requirements dialog?
+Requirement:
+Requirement #:
+A biunique number which will be counted up by GSE
+Requirement ID:
+Alpha numeric requirement ID choosen by you
+Dialog ID:
+object-ID:
+Affected Requirements:
+Choose the requirements this new requirement relates to
+<-Add--
+--Remove->
+(no dialog)
+(no object)
+NOTE: You have to enter a Requirement ID!
+NOTE: The Requirement ID has to be unique!
+NOTE: You have to enter the requirement text!
+Delete requirements…
+Do you really want to delete the
+selected requirements?
+Create
+Export directory:
+…
+Activate background color
+Background color:
+Creates a c++ header file containing all resources to include it to your project
+Create resource files header
+(Can be found in the export folder as 'Resources.h')
+Creates a binary file containing all resources
+Create resource file
+(Can be found in the export folder as 'Resources.dat')
+(Can be found in the project/temp folder as 'Resources.h')
+(Can be found in the project/temp folder as 'Resources.dat')
+Start dialog:
+Image set:
+Font set:
+Sound set:
+General resources set:
+Language:
+Resource directory:
+Path to the folder where the application's resources (XML, images, language files …) reside
+Export streaming mode:
+XML
+Binary
+Select image sets…
+Select font sets…
+Select sound sets…
+Select general sets…
+Select languages…
+Export Guiliani standard resources
+Overwrite Header files in StreamRuntime
+If this option is activated, the UserXXXResource.h-Files in the StreamRuntime/include/guiconfig directory will be overwritten.
+Show statistics at end of export/run simulation
+If this option is activated, a dialog is shown containing export-statistics for all resources.
+Remove duplicate resources on export
+If this option is activated all duplicate resources will be removed and their references replaced with the potentially original ID. This only affects Resource-File and Resource-Header
+Execute pre processing script
+Execute post processing script
+Execute script to flash devices
+The script will receive 5 parameters:\nExport path, GSE root path, Project path, Project Name, StreamRuntime path
+Select sets for export
+Enable the check boxes below for all sets that you want to export.
+Export?
+Name
+Please select at least one set for export.
+Exporting
+Exporting resources, please wait.
+Executing preprocessing script…
+Exporting ID headers…
+Exporting resource definitions…
+Exporting languages…
+Exporting dialog
+Exporting images…
+Exporting fonts…
+Exporting sounds…
+Exporting general resources…
+Executing post processing script…
+Creating resource header. This may take a while…
+Creating resource file. This may take a while…
+Executing flashing script…
+Finishing Export
+Export of generated header files recommended
+ADVICE: Export of generated header files is recommended.\n\nYou have removed Resource IDs from the project. If your StreamRuntime-code is referencing these (or subsequent) IDs, then you should copy the newly generated header-files to your StreamRuntime directory and recompile.
+Error in Export
+The export was aborted due to an error.
+Import file:
+Add…
+Remove…
+Prepare resources
+Resources root dir:
+Image config file:
+Font config file:
+Sound config file:
+General resource config file:
+Language file:
+Possible resource files ok.
+Can't determine resource files automatically, please correct resource files above.
+Current language
+Reference language
+Current font preview
+Reference font preview
+Import language
+Export language
+Actions:
+Remove
+New ID
+Comparative text
+Translation
+Check for truncations
+Text truncations for language:
+Dialog has unsaved changes
+GSE will only search in saved dialogs. Do you want to save the dialog before searching?
+View:
+Apply this font to selected object on the desktop
+Change
+Insert new font
+Actions:
+Remove
+New ID
+Insert new object-ID
+Please enter the name of the new object-ID here
+New object-ID:
+new object-ID…
+Find object-ID…
+Invalid object-ID
+The entered object-ID already exists.
+Insert new text-ID
+Please enter the name of the new text-ID here
+New text-ID:
+Invalid text-ID
+The text-ID you have entered already exists.
+Save project in folder:
+Browse
+Project name:
+A folder labeled with your project name will be created in the folder you specified above
+View:
+Apply this image to selected object on the desktop
+Change
+Insert new image
+Actions:
+Remove
+Filter Images:
+Quit GSE
+Do you really want to quit the Guiliani Streaming Editor?
+Resource text test 2
+Remove Dialog
+Do you really want to remove the selected dialog?
+Remove Image
+Do you really want to remove the selected image(s)?
+Remove Control
+Do you really want to remove the selected control(s)?
+RLE was selected as export-format. When using eGML as gfx-driver\nrotated blits and stretch-blits with non-integer values are not supported.
+Insert new image-ID
+Filename:
+New image-ID:
+ID already exists
+This ID already exists. Please choose a new ID.
+Check input
+Please check your input. All input fields must be filled.
+Reset Export-Format
+Do you really want to reset all images to default?
+Export-Format reset.
+Number of reset images: 
+Change image-ID
+Filename:
+Old image-ID:
+Add Custom-Extension
+Add Command
+Command class name
+Command-ID
+Add Layouter
+Layouter class name
+Layouter-ID
+Add Behaviour
+Behaviour class name
+Behaviour-ID
+Add Control
+Control class name
+Control-ID
+Add Factory
+Factory class name
+ID or class name is not a valid C-identifier [a-zA-Z0-9_].\nThe class and ID name needs to be distinct.
+ID or class name already exists.\nCustom extension can not be created!
+Custom extension can not be created due to evaluation limit is exceeded.
+Custom extension has been created successfully.\n\nMake changes to the generated source files on your\nneeds and recompile GSE to apply the new custom extension.
+Custom extension failed to create.
+Controls pack:
+Error while reading controls pack
+Could not load the images from the choosen controls pack
+properly. Please look at the error console.
+permanent
+Resource will be held permanently in memory
+Export-Format:
+Format which is used to export the resource (RAW, RLE, ...)
+Dialogs
+Run
+Settings
+New project
+Do you want to save the current project before creating a new one?
+Open project
+Do you want to save the current project before opening a new one?
+Quit GSE
+Do you want to save the current project before quitting GSE?
+Change font-ID
+Filename:
+font-ID:
+Size:
+Remove font
+Do you really want to remove the selected font?
+Change Guiliani resource
+Changing Guiliani resources is not possible.
+Remove Guiliani resource
+Removing Guiliani resources is not possible.
+Set name already exists. Please choose a different name.
+Error while adding the new set.
+Load language file
+File
+could not be opened.
+Apply this sound to selected object on the desktop
+Change
+Insert new sound
+Actions:
+Remove
+New ID
+Change
+Actions:
+Remove
+New ID
+Insert new sound-ID
+Filename:
+New sound-ID:
+Play:
+Insert new generic resource
+Filename:
+New resource-ID:
+Delete text(s)
+Do you really want to remove the selected text(s)?
+Remove sound
+Do you really want to remove the selected sound?
+Remove resource
+Do you really want to remove the selected resource?
+Change sound-ID
+Filename:
+sound-ID:
+Change generic resource
+Filename:
+Resource-ID:
+Copy file
+The file cannot be copied because the following file already exists:
+The selected file was already imported into the project.\nIt is not allowed to create new IDs for existing files because there most likely is already an ID that uses this file.
+Invalid export directory.
+An error occurred while exporting the resources.
+Error while reading resources. Force dialog import with damaged resources?
+Dialog imported successfully.
+Dialog has been imported, but some warnings occurred.
+An error occurred while importing the resources.
+Import dialog name already exists in current workspace.
+No dialog specified for import.
+Dialogs to import are not in same directory. Maybe the given dialogs do not belong to the same resource context. Continue?
+Shift
+Ctrl
+Alt
+Meta
+The ID is not a valid C/C++ identifier.\nOnly letters, numerical digits and underscores are permitted.\nThe first character must be a letter or underscore.
+Sucessfully created new CustomStandardFactory.cpp. Please re-compile StreamRuntime.
+Error during creation of the .cpp file for a custom extension. Please make sure that you have compiled GSE for this machine and that the StreamRuntime path is correct.
+Do you really want to remove this entry and all attributes that belong to it?
+About Guiliani Streaming Editor
+Guiliani Streaming Editor
+Version 1.0
+© 2015-2017
+TES Electronic Solutions GmbH
+ALL RIGHTS RESERVED
+Guiliani Revision:
+GSE Revision:
+Hanauer Landstrasse 328-330
+60314 Frankfurt/Main
+Germany
+www.guiliani.de
+info@guiliani.de
+Export Statistics
+Size Input: 
+Size Output: 
+Percentage: 
+Error
+Warning
+Please enter a valid path into the import file field.
+Invalid dialog name. The dialog name must not be empty\nand must not contain any of these characters: \ / : ? " < > |
+Invalid size. Width and hight must not be less than 0.
+Could not open file:
+Invalid project name. The project name must not be empty\nand must not contain any of these characters: \ / : ? " < > |
+A project with the same name already exists.\nWould you like to continue anyway, overwriting any existing files?
+Dialog name
+already exists. Please choose a new name.
+Workspace not empty.
+Workspace directory
+not found.
+No path entered.
+The selected composite object did not accept the child.\nPlease choose another parent and try again.
+Error while loading the new control.
+There is no active dialog.\nPlease load a dialog or create a new one.
+Please set object-ID.
+Setting neighbors is only possible if the object it self has an objectID.
+Project's controls pack path not found
+The project's controls pack path
+\ncould not be found in the list of controls pack paths (see Resources/Manage Images.../Manage controls pack).\nThe standard controls pack will be used, instead.
+An error occurred while saving the project.\n\nProject directory is write protected. Remove write protection from directory or all changes will be lost.
+GSE evaluation notice
+This is a GSE evaluation version.\n\nAll features can be used, but are restricted.\nAdditionally this version of the GSE terminates after\n0 min. of usage and needs to be restarted.
+Guiliani evaluation time expires in 0 minutes.\n\nPlease save workspace project and restart the GSE.
+Loaded dialog is corrupted
+The dialog is corrupted and may not be shown correctly.\nContinue working with an incomplete dialog\nmay damage the workspace project when saving.\n\n Corrupted dialog: 
+One or more dialogs that are part of this workspace project\nare corrupted. To avoid lasting damage to the workspace,\nyou should close and without saving the project and fix the dialog files manually.\n\nList of corrupted dialogs:
+Remove language
+Do you really want to remove the selected language?
+A font file with the same name already exists in the project.\nWould you like to use the existing file or overwrite it with the selected one?
+The selected files already exist in the workspace and have different content.\nDo you want to overwrite the existing files?
+use existing
+overwrite
+An error occurred while loading the project. A file may be missing or corrupt.
+An error occurred while saving the project. Changes have not been saved.
+GSE Projects
+Directories
+All files
+TrueType fonts
+OpenType fonts
+Images
+Sound files
+General resource files
+Image config
+Font config
+Sound config
+General resource config
+Language file
+Guiliani dialog
+Open  File
+Look  in:
+Open
+Save  File  As
+Save  in:
+Save
+Choose  Directory
+Choose  in:
+Choose
+Home Path
+Root Path
+Current Directory
+Filename:
+Filetype:
+Cancel
+Resource text test 3
+Error console
+Clear console contents
+CustomStandardFactory generator done
+Manage Datapool...
+Add new Entry
+Remove Entry
+Add as Observer
+Remove Observer(s)
+No DataPool Entry selected...
+Rename ID
+Switches between text list or thumbnail display 
+Process canceled on user request.
+This project was created with an older version of GSE. The project has been converted to the latest version.\nThis will cause problems if opening the converted project in older versions of GSE.
+Name:
+Description:
+Initial Value:
+Loading Workspace
+Loading in progress. Please wait...
+Clearing previous workspace...
+Opening project...
+Loading Resource Identifiers...
+Loading Settings...
+Loading Dialogs...
+Activate Workspace...
+Updating Resource Reference Counts
+Please wait while workspace is being processed.
+Searching for truncated texts
+Searching for truncations in dialog 
+Read active resource set names...
+Loading Image resources...
+Loading Language resources...
+Loading Font resources...
+Loading Sound resources...
+Loading General resources...
+Loading Properties resources...
+Processing dialog 
+Searching for ID
+Object-ID
+Image-ID
+Text-ID
+Font-ID
+Sound-ID
+Generic Resource-ID
+Attribute name
+String Value
+Integer value for attribute
+Float value for attribute
+Boolean value for attribute
+Version limit reached
+The maximum number of dialogs for this license has been reached.
+New Folder
+Name:
+Color Selection
+Overwrite File(s)
+Delete File(s)
+Directory can't be deleted: 
+File(s) can't be deleted: 
+Directory can't be created: 
+Directory already exists: 
+Do you really want to delete file(s): 
+The file is not readable: 
+Do you really want to overwrite file(s): 
+You do not have enough privileges for: 
+Directory does not exist: 
+Can't change parent: 
+Can't switch directory: 
+Resource text test 4

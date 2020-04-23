@@ -1,0 +1,671 @@
+﻿Beenden
+Auswählen
+Abbrechen
+Bild hinzufügen
+Bild entfernen
+OK
+Schließen
+Ja
+Nein
+Bild-ID:
+Dateiname:
+Resource text test 1
+Datei
+Bearbeiten
+Ansicht
+Layout
+Ressourcen
+GSE-Erweiterungen
+Fenster
+Hilfe
+Neues Projekt…
+Neuer Dialog…
+Projekt öffnen…
+Letzte Projekte
+Dialog öffnen…
+Datei importieren
+Projekt speichern
+Projekt speichern unter…
+Einstellungen…
+Simulation starten…
+Beenden
+Projekt schließen
+Dialog schließen
+Rückgängig
+Wiederherstellen
+Kopieren
+Ausschneiden
+Einfügen
+Löschen
+Alles markieren
+Suchen
+Zoom in
+Zoom out
+Hilfslinien einblenden
+Hilfslinien ausblenden
+Raster ein/ausblenden
+Objekte anordnen
+Objekte ausrichten
+Gruppierung erstellen
+Gruppierung aufheben
+auf die selbe Größe skalieren
+eine Ebene nach vorne
+eine Ebene nach hinten
+in den Vordergrund
+in den Hintergrund
+Objekt(e) links ausrichten
+Objekt(e) rechts ausrichten
+Objekt(e) oben ausrichten
+Objekt(e) unten ausrichten
+Objekt(e) vertikal zentrieren
+Objekt(e) horizontal zentrieren
+Objekt(e) auf gleiche Größe bringen
+Objekt an Bildgröße anpassen
+Objekt(e) vertikal verteilen
+Objekt(e) horizontal verteilen
+verwalten
+Bilder…
+Texte…
+Schriftarten…
+Sounds…
+Weitere Ressourcen…
+Datapool…
+Requirements…
+Exportieren…
+Importieren…
+Suche ungenutzte Ressource-IDs
+Erstelle GSE-Erweiterung…
+Generiere angepasste StandardFactory
+Controls-Fenster einblenden
+Dialogliste einblenden
+Objekthierarchie-Fenster einblenden
+Eigenschaften-Fenster einblenden
+Arbeitsbereich einblenden
+Fehlerkonsole einblenden
+Alle Fenster anordnen
+Animations-Fenster einblenden
+Willkommens-Fenster beim Start anzeigen
+Objekt an Größe seines ersten Bilds anpassen
+Objekt duplizieren
+Hilfslinien an/aus
+Raster an/aus
+Einrasten an Hilfslinien an/aus
+Koordinaten/Größe an/aus
+Über Guiliani Streaming Editor…
+Handbuch…
+GSE konnte Hilfe-Datei nicht öffnen
+Konnte angegebene Viewer-Datei nicht öffnen: 
+Auf dieser Plattform nicht implementiert
+Die Guiliani Hilfe wurde nicht gefunden.\nBitte sicherstellen, dass "
+" im Verzeichnis\n
+\nvorliegt.
+Neuen Dialog anlegen
+Dialog-Name:
+vorheriges Format beibehalten
+Vorlage:
+Breite:
+Höhe:
+Als Vorlage speichern
+Vorlage löschen
+Pixel
+Dialog durchsuchen
+Suche nach
+Suche Wert
+Suche in
+im aktuellen Dialog
+in allen Dialogen
+Suchen
+Suche nach Attribut Name
+Suche ObjektID
+Suchtext:
+Suche in:
+Global
+Aktueller Dialog
+Kinder der Selektion
+Objekt ID
+Dialog
+Kind
+Suchergebnis ungültig
+Objekt nicht gefunden. Der Dialog wurde nach der Suche verändert.
+Bitte Dialog speichern und erneut suchen.
+Keine Suchergebnisse.
+Die Suche endete ohne Ergebnisse.
+Attribut Name fehlt
+Bitte Attribut-Namen eingeben.
+Ungültiger Wert.
+Bitte einen gültigen Wert in das Suchfeld eingeben.
+Ungenutze Ressource-IDs suchen
+Suche nach ungenutzter
+Alle löschen
+Ausgewählte löschen
+Sprache importieren
+Sprache importieren (*.txt oder *.lng):
+Importiere Sprachen-Sets (aus *.csv)
+Importiere in Set namens:
+(Überschreiben existierender Sprachen in Projekt Eigenschaften festlegen)
+Aus Datei laden:
+Sprachen
+Eine Sprache mit dem eingegebenen Namen existiert bereits.
+Die Sprache
+wird nicht überschrieben, wie in den Projekt-Eigenschaften festgelegt.
+Es wurde keine Sprachdatei eingegeben.
+Sprachen exportieren
+Eine Sprache exportieren:
+Importiere alle Sprachen-Sets
+Speichern in Datei:
+(Der Separator kann in den Projekteinstellungen geändert werden)
+Sprachen
+Es wurde keine Sprachdatei eingegeben.
+Es wurde kein Ordner ausgewählt.
+Text ID
+Deutsch
+Englisch
+Französisch
+Sets verwalten
+Bilder-Sets verwalten
+Schriftarten-Sets verwalten
+Sound-Sets verwalten
+Weitere Ressourcen-Sets verwalten
+Sprach-Sets verwalten
+Neues Set
+Set löschen
+Set umbenennen
+Neu
+Löschen
+Umbenennen
+kopiere gewähltes Set
+Name des neuen Sets:
+Neuer Name des Sets:
+Ressourcen kopieren von:
+Set wählen zum Löschen:
+Set wählen zum Umbenennen:
+Neue Font-ID einfügen
+Dateiname:
+Neue Font-ID:
+Größe:
+Objekt-Hierarchie
+Objekt-ID / Typ
+Sichtbar
+Anhängen an…
+Kompletten Dialog anzeigen
+Teildialog anzeigen
+Attribute
+Attribut
+Wert
+(Klicken zum Hinzufügen)
+In diesem Eingabefeld sind nur Zahlen zugelassen
+In diesem Eingabefeld sind nur Integer Zahlen zugelassen
+Animationen
+Interpolations Start-Wert aus Attribut holen
+Attribut Animation an/aus
+Interpolations Ziel-Wert aus Attribut holen
+Neue AnimationChain erstellen
+Animation löschen
+Selektiere animiertes Objekt
+Aktivieren/Deaktivieren der Vorschau dieser Animation
+Neue Animation erstellen
+Vergrößern
+Verkleinern
+AnimationChain löschen
+Controls
+Globale Einstellungen
+Projekt Einstellungen
+Einstellungen3
+Einstellungen4
+Einstellungen5
+Projekt-Verzeichnis:
+Hilfe-Verzeichnis:
+GSE-Sprachdatei:
+Sprachdatei-Fehler
+Fehler beim Umschalten der Sprache. Datei existiert nicht oder ist defekt.
+CHM-Viewer:
+Konsole im Fehlerfall automatisch öffnen
+Workspace temp Verzeichnis nie löschen
+Import-Verzeichnis:
+Sprachen Import/Export:
+Separator in .csv-Datei
+Existierende Sprachen beim Import überschreiben
+Das Import-Verzeichnis darf nicht leer sein!
+Dialoge auf Korrektheit prüfen
+Alle Dialoge werden beim Laden geprüft. Dies kann den Ladevorgang verlangsamen.
+Raster:
+Horizontal:
+Vertikal:
+Unveränderte Dateien beim "Export" und "Simulation Starten" überspringen.
+Endianess und Alignment für binäre Dateien beim Export
+Default Export-Format für Bilder:
+Export-Format zurücksetzen
+Req.-Nr.
+Req.-ID
+Req.-Text
+Dialog-ID
+Objekt-ID
+Betr. Requirements
+Requirements verwalten…
+Neu
+Bearbeiten
+Löschen
+Zeigen
+Exportieren
+Exportiere Requirements…
+Requirements wirklich nach 'Requirements.csv' exportieren? Bereits existierende Datei wird überschrieben!
+Die Requirements wurden erfolgreich in 'Requirements.csv' gespeichert.
+Das Projekt hat ungespeicherte Änderungen.
+Wenn das Projekt jetzt nicht gespeichert, werden eventuell falsche Objekt-IDs angezeigt.\nVor dem Öffnen der Requirements das Projekt speichern?
+Requirement:
+Requirement-Nr.:
+Eineindeutige Nummer die vom GSE immer weiter hochgezählt wird
+Requirement-ID:
+Von Ihnen gewählte alphanumerische Requirement ID
+Dialog ID:
+Objekt ID:
+Betroffene Requirements:
+Requirements, auf welches sich das neue bezieht
+<-Hinzufügen--
+--Entfernen->
+(kein Dialog)
+(kein Objekt)
+ACHTUNG: Bitte eine Requirement-ID eingeben!
+ACHTUNG: Die Requirement-ID darf nicht doppelt sein!
+ACHTUNG: Bitte den Requirement-Text eingeben!
+Requirements löschen…
+Sollen wirklich die
+selektierten Requirements gelöscht werden?
+Erzeugen
+Export-Verzeichnis:
+…
+Hintergrundfarbe aktivieren
+Hintergrundfarbe:
+Erstellt eine Header-Datei mit allen Ressourcen, die zum Projekt hinzugefügt werden kann
+Resource-Header erstellen
+(Wird im Export-Ordner als 'Resources.h' abgelegt.)
+Erstellt eine Ressourcen-Datei mit allen Ressourcen
+Ressourcen-Datei erstellen
+(Wird im Export-Ordner als 'Resources.dat' abgelegt.)
+(Wird in /temp im Projekt-Ordner als 'Resources.h' abgelegt.)
+(Wird in /temp im Projekt-Ordner als 'Resources.dat' abgelegt.)
+Start-Dialog:
+Image-Set:
+Font-Set:
+Sound-Set:
+Weitere Ressourcen-Set:
+Sprache:
+Ressourcen-Verzeichnis:
+Ordner, in welchem die Resource-Dateien enthalten sind
+Export Streaming-Mode:
+XML
+Binär
+Image-Sets auswählen…
+Font-Sets auswählen…
+Sound-Sets auswählen…
+Ressourcen-Sets auswählen…
+Sprachen auswählen…
+Standard Guiliani Resources exportieren
+Header-Dateien in der StreamRuntim überschreiben
+Wenn diese Option ausgewählt ist, werden die UserXXXResource.h-Dateien im Ordner StreamRuntime/include/guiconfig überschrieben
+Export-Statistik nach Export/Simulation anzeigen
+Wenn diese Option ausgewählt ist, wird am Ende des Projekt-Exports oder beim Öffnen der Simulation eine Statistik der Export-Daten angezeigt.
+Ersetze gleiche Ressourcen mit unterschiedlichen IDs
+Wenn diese Option ausgewählt ist, werden beim Export inhaltlich gleiche Ressourcen mit der ID der Original-Datei ersetzt. Dies betrifft nur den Export von Resource-Datei und Resource-Header.
+Script vor dem Export ausführen
+Script nach dem Export ausführen
+Script zum Device flashen ausführen
+Das Skript erhält 5 Parameter:\nExport Pfad, GSE Pfad, Projekt Pfad, Projekt Name, StreamRuntime Pfad
+Sets für den Export wählen
+Kontrollkästchen unten aktivieren, um Sets für den Export auszuwählen.
+Exportieren?
+Name
+Bitte mindestens ein Set für den Export auswählen.
+Exportieren
+Ressourcen werden exportiert, bitte warten.
+Script zur Vorverarbeitung läuft…
+Exportiere ID-Header…
+Exportiere Ressource-Definitionen…
+Exportiere Sprachen…
+Exportiere Dialog
+Exportiere Bilder…
+Exportiere Fonts…
+Exportiere Sounds…
+Exportiere generelle Ressourcen…
+Script zur Nachbereitung läuft…
+Erzeuge Resource-Header. Dies kann eine Weile dauern…
+Erzeuge Resource-File. Dies kann eine Weile dauern…
+Flashing-Script läuft…
+Export abschliessen
+Exportieren der erzeugten Header-Dateien empfohlen
+HINWEIS: Exportieren der erzeugten Header-Dateien empfohlen. Es wurden Resource-IDs aus dem Projekt entfernt. Wenn der StreamRuntime-Code diese (oder nachfolgende) IDs referenziert, dann sollten die neu generierten Header-Dateien in das StreamRuntime-Verzeichnis kopiert und neu übersetzt werden.
+Fehler im Export
+Der Export wurde aufgrund eines Fehlers abgebrochen.
+Import-Datei:
+Hinzufügen…
+Entfernen…
+Ressourcen vorbereiten
+Ressourcen-Verzeichnis:
+Image-Konfigurationsdatei:
+Font-Konfigurationsdatei:
+Sound-Konfigurationsdatei:
+Weitere Ressourcen-Konfigurationsdatei:
+Sprachendatei:
+Mögliche Ressourcen wurden automatisch ermittelt.
+Kann Ressourcen nicht automatisch ermitteln, bitte die entsprechenden Pfade in den Feldern korrigieren.
+Aktuelle Sprache
+Referenz-Sprache
+Font aktuelle Sprache
+Font Referenzsprache
+Sprache importieren
+Sprache exportieren
+Aktionen:
+Löschen
+Neue ID
+Vergleichstext
+Übersetzung
+Abgeschnittene Texte suchen
+Abgeschnittene Texte für die Sprache:
+Der Dialog hat ungespeicherte Änderungen.
+Es wird nur im gespeicherten Stand gesucht. Projekt vorher speichern?
+Darstellung:
+Diese Schrift auf das selektierte Element der Arbeitsfläche anwenden
+Ändern
+Neue Schrift einfügen
+Aktionen:
+Löschen
+Neue ID
+Neue Object-ID einfügen
+Bitte hier den Namen der neuen Object-ID eingeben
+Neue Object-ID:
+neue Object-ID…
+Object-ID suchen…
+Ungültige Object-ID
+Die eingegebene Object-ID existiert bereits.
+Neue Text-ID einfügen
+Bitte hier den Namen der neuen Text-ID eingeben
+Neue Text-ID:
+Ungültige Text-ID
+Die eingegebene Text-ID existiert bereits.
+Projekt in diesem Verzeichnis speichern:
+Durchsuchen
+Projektname:
+In dem oben angegebenen Verzeichnis wird ein Ordner mit dem Projektnamen angelegt
+Darstellung:
+Diese Grafik auf das selektierte Element der Arbeitsfläche anwenden
+Ändern
+Neues Bild einfügen
+Aktionen:
+Löschen
+Bilder filtern nach:
+GSE Beenden
+Soll der Guiliani Streaming Editor wirklich beendet werden?
+Resource text test 2
+Dialog löschen
+Soll der ausgewählte Dialog wirklich gelöscht werden?
+Bild löschen
+Ausgewählte(s) Bild(er) wirklich löschen?
+Control löschen
+Ausgewählte Control(s) wirklich löschen?
+RLE wurde als Export-Format ausgewählt. Bei zeitgleichem Verwenden von eGML als Grafiktreiber\nwerden Rotated-Blits und nicht ganzzahlige Stretch-Blits nicht unterstützt.
+Neue Image-ID einfügen
+Dateiname:
+Neue Image-ID:
+ID existiert bereits
+Diese ID existiert bereits. Bitte eine neue ID wählen.
+Eingabe überprüfen
+Bitte Eingabe überprüfen. Alle Eingabefelder müssen gefüllt sein.
+Export-Format zurücksetzen
+Export-Froamt aller Bilder auf default zurücksetzen?
+Export-Format zurückgesetzt.
+Anzahl zurückgesetzter Bilder: 
+Image-ID ändern
+Dateiname:
+Bisherige Image-ID:
+GSE-Erweiterung hinzufügen
+Command hinzufügen
+Command Klassenname
+Command ID
+Layouter hinzufügen
+Layouter Klassenname
+Layouter ID
+Behaviour hinzufügen
+Behaviour Klassenname
+Behaviour ID
+Control hinzufügen
+Control Klassenname
+Control ID
+Factory hinzufügen
+Factory Klassenname
+Ungültiger Bezeichner für ID oder Klassenname [a-zA-Z0-9_].\nID- und Klassenbezeichner müssen verschieden und eindeutig sein.
+ID oder Klassenname existiert bereits.\nCustom-Extension kann nicht erstellt werden.
+In dieser GSE Evaluationsversion können keine\nweiteren Custom-Extensions erstellt werden.
+Die Custom-Extension wurde erfolgreich generiert.\nBitte Änderungen in die neu erstellten Quelldateien einfügen und GSE neu übersetzen, um die Änderungen zu übernehmen.
+Die Custom-Extension konnte nicht erstellt werden.
+Controls-Pack:
+Fehler beim Lesen des Controls-Packs
+Das aktuell eingestellte Controls-Pack
+konnte nicht richtig gelesen werden. Bitte Fehlerkonsole beachten.
+Permanent
+Die Ressource wird permanent im Speicher belassen
+Export-Format:
+Format, in dem die Ressource exportiert wird (RAW, RLE, ...)
+Dialogliste
+Starten
+Einstellungen
+Neues Projekt
+Soll das aktuelle Projekt gespeichert werden, bevor ein neues angelegt wird?
+Projekt öffnen
+Soll das aktuelle Projekt gespeichert werden, bevor ein neues geöffnet wird?
+GSE Beenden
+Soll das aktuelle Projekt gespeichert werden, bevor der GSE beendet wird?
+Font-ID ändern
+Dateiname:
+Font-ID:
+Größe:
+Schrift löschen
+Soll die ausgewählte Schrift wirklich gelöscht werden?
+Guiliani-Ressource ändern
+Das Ändern einer Guiliani-Ressource ist nicht möglich.
+Guiliani-Ressource löschen
+Das Löschen einer Guiliani-Ressource ist nicht möglich.
+Dieses Set existiert bereits. Bitte einen anderen Namen wählen.
+Fehler beim Hinzufügen des neuen Sets.
+Sprachdatei laden
+Datei
+konnte nicht geöffnet werden.
+Diesen Klang auf das selektierte Element der Arbeitsfläche anwenden
+Ändern
+Neuen Ton einfügen
+Aktionen:
+Löschen
+Neue ID
+Ändern
+Aktionen:
+Löschen
+Neue ID
+Neue Sound-ID einfügen
+Dateiname:
+Neue Sound-ID:
+Abspielen:
+Neue allgemeine Ressource einfügen
+Dateiname:
+Neue Ressourcen-ID:
+Texte löschen
+Ausgewählte Texte löschen?
+Ton löschen
+Ausgewählte Töne löschen?
+Ressource löschen
+Ausgewählte Ressourcen löschen?
+Sound-ID ändern
+Dateiname:
+Sound-ID:
+Allgemeine Ressource ändern
+Dateiname:
+Ressourcen-ID:
+Datei kopieren
+Die Datei kann nicht kopiert werden, weil die folgende Datei bereits existiert:
+Die gewählte Datei wurde bereits ins Projekt importiert.\nEs ist nicht erlaubt, neue IDs für existierende Dateien anzulegen, da es üblicherweise bereits eine ID gibt, die auf diese Datei verweist.
+Ungültiges Export-Verzeichnis.
+Beim Exportieren der Ressourcen ist ein Fehler aufgetreten.
+Fehler beim Einlesen der Ressourcen. Dialog trotzdem importieren?
+Dialog wurde erfolgreich importiert.
+Dialog wurde importiert, es sind jedoch Warnungen aufgetreten.
+Beim Importieren der Ressourcen ist ein Fehler aufgetreten.
+Der Name des zu importierenden Dialogs existiert bereits.
+Kein Dialog zum Importieren angegeben.
+Die angegebenen Dialog-Dateien befinden sich nicht im gleichen Verzeichnis. Möglicherweise gehören sie nicht zum selben Kontext. Fortfahren?
+Shift
+Strg
+Alt
+Meta
+Die ID ist kein gültiger C/C++-Bezeichner.\nEs sind nur Buchstaben, Ziffern und Unterstriche erlaubt.\nDas erste Zeichen muss ein Buchstabe oder Unterstrich sein.
+Erstellung einer neuen CustomStandardFactory.cpp erfolgreich abgeschlossen. Bitte StreamRuntime neu kompilieren.
+Fehler bei Erstellung der .cpp Datei einer benutzerspezifischen Erweiterung. Wurde der GSE für diesen Rechner kompiliert und stimmt der Pfad zur StreamRuntime?
+Diesen Eintrag und alle zugehörigen Attribute wirklich löschen?
+Über Guiliani Streaming Editor
+Guiliani Streaming Editor
+Version 1.0
+© 2015-2017
+TES Electronic Solutions GmbH
+ALL RIGHTS RESERVED
+Guiliani Revision:
+GSE Revision:
+Hanauer Landstrasse 328-330
+60314 Frankfurt/Main
+Deutschland
+www.guiliani.de
+info@guiliani.de
+Export Statistik
+Größe Eingangsdaten: 
+Größe Exportdaten: 
+Prozentsatz: 
+Fehler
+Warnung
+Bitte einen gültigen Pfad in das Import-Datei Feld eintragen.
+Ungültiger Dialogname. Der Dialogname darf nicht leer sein\nund keines der folgenden Zeichen enthalten: \ / : ? " < > |
+Ungültige Größe. Breite und Höhe dürfen nicht kleiner als 0 sein.
+Datei konnte nicht geöffnet werden:
+Ungültiger Projektname. Der Projektname darf nicht leer sein\nund keines der folgenden Zeichen enthalten: \ / : ? " < > |
+Ein Projekt dieses Namens existiert bereits.\Trotzdem fortfahren und existierende Dateien überschreiben?
+Dialogname
+existiert bereits. Bitte einen neuen Namen wählen.
+Workspace ist nicht leer.
+Workspaceverzeichnis
+wurde nicht gefunden.
+Kein Pfad angegeben.
+Das gewählte Container-Objekt hat das neue Kindobjekt nicht akzeptiert.\nBitte einen andere Container wählen und erneut versuchen.
+Fehler beim Laden des neuen Controls.
+Derzeit ist kein Dialog aktiv.\nBitte Dialog laden oder einen neuen erzeugen.
+Bitte Object-ID eingeben.
+Nachbarn zu definieren ist nur möglich, wenn für das Objekt eine Object-ID gesetzt ist.
+Controls-Pack-Pfad wurde nicht gefunden
+Der aktuell im Projekt eingestellte Controls-Pack-Path
+\nkonnte in der Controls-Pack-Pfad-Liste (siehe Resourcen/Bilder verwalten.../Controls-Pack verwalten) nicht gefunden werden.\nEs wird daher das Standard-Controls-Pack verwendet.
+Beim Speichern des Projekts ist ein Fehler aufgetreten.\n\nProjektordner ist schreibgeschützt. Bitte Schreibschutz entfernen oder die Änderungen gehen verloren.
+GSE Evaluations-Version
+Dies ist eine GSE Evaluations-Version.\n\nAlle Funktionen können genutzt werden, sind aber \nbegrenzt. Weiterhin beendet sich diese\nApplikation nach 0 min. automatisch und muss\nneu gestartet werden.
+Die Guiliani Evaluationszeit läuft in 0 Minuten ab.\n\nBitte Projekt speichern und GSE neustarten.
+Dialog ist fehlerhaft
+Dieser Dialog ist fehlerhaft und wird eventuell nicht richtig dargestellt.\nAktives Arbeiten an einem fehlerhaften Dialog kann das\nWorkspace Projekt beim Speichern beschädigen.\n\nFehlerhafter Dialog: 
+Ein oder mehrere Dialoge, die Teil dieses Workspace Projekts sind,\nsind beschädigt. Um weitere Schäden am Workspace zu vermeiden,\nwird empfohlen, das aktive Projekt ohne speichern zu schließen und das Problem\nmanuell zu beheben.\n\nListe der beschädigten Dialoge:
+Sprache löschen
+Soll die ausgewählte Sprache wirklich gelöscht werden?
+Eine Font-Datei mit diesem Namen existiert bereits im Projekt. Soll die existierende Datei beibehalten werden oder mit der ausgewählten Datei überschreiben?
+Die ausgewählten Dateien existieren bereits mit anderem Inhalt im Workspace.\nSollen die vorhandenen Dateien überschrieben werden?
+beibehalten
+überschreiben
+Beim Laden des Projekts ist ein Fehler aufgetreten. Eine Datei könnte beschädigt sein oder fehlen.
+Beim Speichern des Projekts ist ein Fehler aufgetreten. Die Änderungen wurden nicht gespeichert.
+GSE-Projekte
+Verzeichnisse
+Alle Dateien
+TrueType-Fonts
+OpenType-Fonts
+Bilder
+Sound-Dateien
+Weitere Resourcen-Dateien
+Bildgestaltung
+Fontgestaltung
+Soundgestaltung
+Weitere Resourcengestaltung
+Sprachdatei
+Guiliani-Dialog
+Öffne Datei
+Dateipfad:
+Öffnen
+Date speichern als
+Speichern  in:
+Speichern
+Dateiordner wählen
+Dateipfad:
+Auswählen
+Benutzer-Ordner
+Haupt-Ordner
+Aktueller Ordner
+Dateiname:
+Dateityp:
+Abbrechen
+Resource text test 3
+Fehlerkonsole
+Inhalt der Konsole löschen
+CustomStandardFactory-Generator fertig
+Datapool verwalten...
+Neuer Eintrag
+Eintrag löschen
+ObjektID registrieren
+ObjektID deregistrieren
+Kein DataPool Eintrag ausgewählt...
+ID umbenennen
+Umschalten zwischen Text oder Icon Darstellung
+Vorgang wurde durch den Benutzer abgebrochen.
+Das Projekt wurde mit einer Vorgängerversion des GSE erstellt. Es wurde auf die aktuelle Version konvertiert.\nDadurch können Probleme auftreten, wenn das konvertierte Projekt mit einer älteren Version des GSE wieder geöffnet wird.
+Name:
+Beschreibung:
+Initialer Wert:
+Lade Workspace
+Es wird geladen. Bitte warten...
+Vorherigen Workspace aufräumen...
+Projekt öffnen...
+Ressourcen-IDs laden...
+Einstellungen laden...
+Dialoge laden...
+Workspace aktivieren...
+Referenz-Zähler für Ressourcen werden angepasst
+Der Workspace wird bearbeitet. Bitte warten.
+Suche nach abgeschnittenen Texten
+Suche nach Überlängen in Dialog 
+Lese Namen des gewählten Ressourcen-Sets...
+Lade Bilder...
+Lade Sprachen...
+Lade Schriftarten...
+Lade Klänge...
+Lade allgemeine Ressourcen...
+Lade Eigenschaften...
+Bearbeite Dialog 
+Suche nach ID
+Object-ID
+Image-ID
+Text-ID
+Font-ID
+Sound-ID
+Allgemeine Ressource-ID
+Attributname
+Zeichenkette
+Integerwert für Attribut
+Fließkommawert für Attribut
+Boolescher Wert für Attribut
+Lizenz-Beschränkung erreicht
+Maximale Anzahl Dialoge für Lizenz wurde erreicht.
+Neuer Ordner
+Name:
+Farbe wählen
+Datei(en) überschreiben
+Datei(en) löschen
+Verzeichnis kann nicht gelöscht werden: 
+Datei kann nicht gelöscht werden: 
+Verzeichnis kann nicht erstellt werden: 
+Verzeichnis existiert bereits: 
+Datei(en) wirklich löschen? 
+Datei ist nicht lesbar: 
+Datei(en) wirklich überschreiben? 
+Nicht genügend Berechtigungen für: 
+Verzeischnis existiert nicht: 
+Kann übergeordnetes Verzeichnis nicht wechseln: 
+Kann Verzeichnis nicht wechseln: 
+Resource text test 4

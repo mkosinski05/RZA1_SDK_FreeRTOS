@@ -1,0 +1,15 @@
+<GeneralResources>
+<FileVersion>1</FileVersion>
+<IDofFirstResource>0</IDofFirstResource>
+<ResourceCount>2</ResourceCount>
+<Resource>
+<ResourcePath></ResourcePath>
+<Permanent>false</Permanent>
+<Comment>ResourceID 0</Comment>
+</Resource>
+<Resource>
+<ResourcePath>other_resources/EventRecord.dat</ResourcePath>
+<Permanent>false</Permanent>
+<Comment>RES_EVENTRECORD 1</Comment>
+</Resource>
+</GeneralResources>

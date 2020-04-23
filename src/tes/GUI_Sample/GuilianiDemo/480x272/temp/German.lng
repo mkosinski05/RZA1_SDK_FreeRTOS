@@ -1,0 +1,30 @@
+﻿Haupt Menü
+Animation
+Schieberegler
+Knöpfe
+Einstellungen
+Pegel und Walze
+Englisch?
+Dunkle Ansicht?
+Helle Ansicht?
+Karussell
+Modus wechseln
+Als <b>Gregor Samsa</b> eines Morgens aus <i> <b>unruhigen Träumen</b> erwachte</i>, fand er sich in seinem Bett zu einem <u>ungeheueren Ungeziefer verwandelt.</u> Er lag auf seinem <colorFFAA3333>panzerartig harten</colorFFAA3333> Rücken und sah, wenn er den Kopf ein wenig hob, seinen gewölbten, braunen, von bogenförmigen Versteifungen geteilten Bauch, auf dessen Höhe sich die Bettdecke, zum gänzlichen Niedergleiten bereit, kaum noch erhalten konnte. Seine vielen, im Vergleich zu seinem sonstigen Umfang kläglich dünnen Beine flimmerten ihm hilflos vor den Augen.
+Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in seinem Bett zu einem ungeheueren Ungeziefer verwandelt. Er lag auf seinem panzerartig harten Rücken und sah, wenn er den Kopf ein wenig hob, seinen gewölbten, braunen, von bogenförmigen Versteifungen geteilten Bauch, auf dessen Höhe sich die Bettdecke, zum gänzlichen Niedergleiten bereit, kaum noch erhalten konnte. Seine vielen, im Vergleich zu seinem sonstigen Umfang kläglich dünnen Beine flimmerten ihm hilflos vor den Augen.
+Scratchpad
+Tastatur
+Benutzer:
+sichtbar
+Scroll Wechseln
+Hoch
+Mittel
+Niedrig
+Guiliani bietet eine Vielzahl verschiedener Easing-Typen an, die es ermöglichen der Applikation ein dynamisches Verhalten zu geben. Durch Klassenableitung können neue maßgeschneiderte Easing-Typen implementiert werden.
+Guiliani bietet sowohl Standard-Controls wie Schaltflächen, Auswahlfelder und Optionsfelder als auch spezielle Controls wie den Blendbutton an. Alle Bilder die innerhalb der Applikation benutzt werden, können während der Laufzeit durch andere Image-Sets ausgetauscht werden (siehe Einstellungen).
+Guiliani bietet ein zentrales Daten-Management an, den Datapool, das verschiedene Controls und Applikationslogik miteinander verbindet, um Daten auszutauschen.
+Guiliani verfügt sowohl über Standardtext als auch Rich Text. Durch die Verwendung von TextIDs kann während der Laufzeit einfach die Sprache gewechselt werden.
+Guiliani bietet ebenfalls spezielle Widgets an, um Werte zu verändern oder darzustellen, wie zum Beispiel das Wheel oder die Gauge. Dies hier sind animierte Controls, die durch einen Datapool verbunden sind. Das Easing kann in den Einstellungen verändert werden.
+Guiliani bietet verschiedene Controls für die Navigation durch große Anzahlen von Elementen an, wie das Carousel oder die Touchscroll-View. Der linke Slider bestimmt den Neigungswinkel, der rechte den Abstand und der untere die Anzahl der Elemente. Der Button schaltet die verschiedenen Anzeige-Modi.
+Guiliani verfügt über ein Tastaturwidget, das benutzt werden kann, um verschiedene Informationen einzugeben. Die Eingabe erfolgt in das fokussierte Textfeld, somit können umfangsreiche Formular-Eingabe realisiert werden.
+Viel Spaß beim Ausprobieren von Guiliani! Erweitern Sie mit dem Editor diesen Dialog durch neue Widgets. 
+Guiliani bietet sowohl Sprachwechsel als auch unterschiedliches Skinning während der Laufzeit an.

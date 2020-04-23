@@ -1,0 +1,30 @@
+﻿Main Menu
+Animation
+Slider
+Buttons
+Settings
+Gauge and Wheel
+German?
+Dark Mode?
+Light Mode?
+Carousel
+Change Mode
+One morning, as <b>Gregor Samsa</b> was <i>waking up from <b>anxious dreams</b></i>, he discovered that in his bed he had been <u>changed into a monstrous verminous bug.</u> He lay on his <colorFFAA3333>armour-hard</colorFFAA3333> back and saw, as he lifted his head up a little, his brown, arched abdomen divided up into rigid bow-like sections. From this height the blanket, just about ready to slide off completely, could hardly stay in place. His numerous legs, pitifully thin in comparison to the rest of his circumference, flickered helplessly before his eyes.
+One morning, as Gregor Samsa was waking up from anxious dreams, he discovered that in his bed he had been changed into a monstrous verminous bug. He lay on his armour-hard back and saw, as he lifted his head up a little, his brown, arched abdomen divided up into rigid bow-like sections. From this height the blanket, just about ready to slide off completely, could hardly stay in place. His numerous legs, pitifully thin in comparison to the rest of his circumference, flickered helplessly before his eyes.
+Scratchpad
+Keyboard
+User:
+visible
+Toggle Scroll
+High
+Middle
+Low
+Guiliani provides numerous different easing types to help you easily advance your application's dynamic behaviour. Using C++-subclassing, new custom-made easing types can be implemented as well.
+Guiliani offers standard controls like buttons, checkboxes and radiobuttons, as well as special controls e.g. blendbuttons. All images used within the application can also be changed during runtime when using image sets (see Setting-Screen).
+Guiliani provides a central data-management, called datapool, which helps you to connect different controls or controls and application logic to share data.
+Guiliani features standard text as well as rich text. When using TextIDs the language can easily be switched during runtime (see Settings-Screen).
+Guiliani has also special widgets to control and visualise values, like wheels and gauges. Here you can see animated controls which are connected via a datapool. The easing type can be changed in the settings screen.
+Guiliani offers various types of navigation for greater amounts of elements like carousels or touchscroll views. The left slider is for tilting, the right one for extension and the bottom one for the number of elements. The button toggles between the different display modes.
+Guiliani features a keyboard widget, which can be used to input different information. Here the focussed textfield receives the keyboard input, so extensive form-like inputs can be done.
+Have fun experimenting with Guiliani! Feel free to add new widgets to this dialog by using the editor.
+Guiliani offers language switching as well as skinning during runtime.
