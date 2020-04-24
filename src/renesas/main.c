@@ -52,6 +52,9 @@
 int_t g_led_handle = ( -1);
 bool_t dma_available = false;
 
+
+extern void lvgl_start ( void );
+
 #if R_SELF_BLINK_TASK_CREATION
 /***********************************************************************************************************************
  * Function Name: blink_task
@@ -113,6 +116,7 @@ int_t main (void)
         /* Debug message */
     }
 #endif
+    lvgl_start();
  
     /* Need to determine system state is running */
     if (R_OS_GetNumberOfTasks())
