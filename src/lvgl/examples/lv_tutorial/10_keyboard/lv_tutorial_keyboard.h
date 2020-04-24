@@ -1,10 +1,10 @@
 /**
- * @file lv_tutorial_hello_world
+ * @file lv_tutorial_keyboard.h
  *
  */
 
-#ifndef LV_TUTORIAL_HELLO_WORLD_H
-#define LV_TUTORIAL_HELLO_WORLD_H
+#ifndef LV_TUTORIAL_KEYBOARD_H
+#define LV_TUTORIAL_KEYBOARD_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -21,7 +21,7 @@ extern "C" {
 #include "../../../lv_ex_conf.h"
 #endif
 
-#ifdef LV_USE_TUTORIALS
+#if LV_USE_TUTORIALS && LV_USE_GROUP
 
 /*********************
  *      DEFINES
@@ -34,7 +34,11 @@ extern "C" {
 /**********************
  * GLOBAL PROTOTYPES
  **********************/
-void lv_tutorial_hello_world(void);
+/**
+ * Create a simple GUI to demonstrate encoder control capability
+ * kp_indev optinonally pass a keypad input device to control the object (NULL if unused)
+ */
+void lv_tutorial_keyboard(lv_indev_t * kp_indev);
 
 /**********************
  *      MACROS
@@ -46,4 +50,4 @@ void lv_tutorial_hello_world(void);
 } /* extern "C" */
 #endif
 
-#endif /*LV_TUTORIAL_HELLO_WORLD_H*/
+#endif /*LV_TUTORIAL_KEYBOARD_H*/

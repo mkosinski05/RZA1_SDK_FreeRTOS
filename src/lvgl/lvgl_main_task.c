@@ -8,7 +8,7 @@
 
 #include "lvgl/lvgl.h"
 #include "porting/lv_port_disp.h"
-#include "lv_demo_hello_world/lv_tutorial_hello_world.h"
+#include "lv_apps_config.h"
 
 #define LVGL_TASK_STACK_SIZE 20480
 
@@ -17,7 +17,7 @@ static void prvLittlevGLTask( void *pvParameters );
 void lvgl_start ( void ) {
 
 	os_task_t *p_os_task;
-	p_os_task = R_OS_CreateTask("Guiliani", prvLittlevGLTask, NULL, LVGL_TASK_STACK_SIZE, 1);
+	p_os_task = R_OS_CreateTask("LittlevGL", prvLittlevGLTask, NULL, LVGL_TASK_STACK_SIZE, 1);
 
 
 	/* Failed to create the task? */
@@ -53,7 +53,7 @@ static void prvLittlevGLTask( void *pvParameters ) {
 
 	//touchpad_init();
 
-	lv_tutorial_hello_world();
+	lv_example();
 
 	while (1) {
 		// Called every millisecond by the

@@ -266,6 +266,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/renesas/drivers/r_cache/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/lvgl&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/lvgl/examples/lv_tutorial&quot;"/>
 								</option>
 								<option id="com.renesas.cdt.managedbuild.gcc.rz.option.compiler.cpp.language.1499460805" name="Language standard" superClass="com.renesas.cdt.managedbuild.gcc.rz.option.compiler.cpp.language" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.gcc.rz.option.compiler.cpp.language.default" valueType="enumerated"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.gcc.rz.option.compiler.cpp.otherOptimization.552569327" name="Other optimization flags" superClass="com.renesas.cdt.managedbuild.gcc.rz.option.compiler.cpp.otherOptimization" useByScannerDiscovery="true" valueType="stringList">
@@ -1492,6 +1493,8 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/freertos/portable/gcc/arm_ca9_rza1lu&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/renesas/drivers/r_cache/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/lvgl&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/lvgl/examples/lv_tutorial&quot;"/>
 								</option>
 								<option id="com.renesas.cdt.managedbuild.gcc.rz.option.compiler.cpp.language.1711019140" name="Language standard" superClass="com.renesas.cdt.managedbuild.gcc.rz.option.compiler.cpp.language" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.gcc.rz.option.compiler.cpp.language.default" valueType="enumerated"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.gcc.rz.option.compiler.cpp.otherOptimization.1533674440" name="Other optimization flags" superClass="com.renesas.cdt.managedbuild.gcc.rz.option.compiler.cpp.otherOptimization" useByScannerDiscovery="true" valueType="stringList">

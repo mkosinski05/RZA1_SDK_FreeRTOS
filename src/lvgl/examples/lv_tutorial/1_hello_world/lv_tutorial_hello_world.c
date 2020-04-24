@@ -16,8 +16,9 @@
 /*********************
  *      INCLUDES
  *********************/
-#include <lv_demo_hello_world/lv_tutorial_hello_world.h>
-#ifdef LV_USE_TUTORIALS
+#include "lv_apps_config.h"
+#include "lv_tutorial_hello_world.h"
+#if LV_USE_TUTORIALS
 
 /*********************
  *      DEFINES
