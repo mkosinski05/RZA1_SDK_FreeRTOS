@@ -49,9 +49,10 @@ static void prvLittlevGLTask( void *pvParameters ) {
 
 	// Initialize lvgl and Display
 	lv_init();
+	// Initialized Display Driver
 	lv_port_disp_init();
-
-	//touchpad_init();
+	// Initialize LCD touch Driver
+	lv_port_indev_init();
 
 	lv_example();
 

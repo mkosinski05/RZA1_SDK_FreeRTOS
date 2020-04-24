@@ -4,17 +4,22 @@
  */
 
  /*Copy this file as "lv_port_indev.c" and set this value to "1" to enable content*/
-#if 0
+#if defined(USE_STREAM_IT_RZ)
 
 /*********************
  *      INCLUDES
  *********************/
-#include "r_touch_capacitive.h"
-#include "lv_port_indev_template.h"
+#include "r_typedefs.h"
+#include "r_task_priority.h"
+#include "r_os_abstraction_api.h"
+#include "tp_if.h"
+#include "lv_port_indev.h"
 
 /*********************
  *      DEFINES
  *********************/
+#define TP_INT_PRI              (30uL)
+#define TP_TSK_PRI              (R_OS_TASK_MAIN_TASK_PRI+1)
 
 /**********************
  *      TYPEDEFS
@@ -62,6 +67,9 @@ lv_indev_t * indev_button;
 static int32_t encoder_diff;
 static lv_indev_state_t encoder_state;
 
+os_msg_queue_handle_t q_msg_touch;
+TP_TouchFinger_st gui_touch;
+
 /**********************
  *      MACROS
  **********************/
@@ -102,7 +110,7 @@ void lv_port_indev_init(void)
     /*------------------
      * Mouse
      * -----------------*/
-
+#if 0
     /*Initialize your touchpad if you have*/
     mouse_init();
 
@@ -170,8 +178,11 @@ void lv_port_indev_init(void)
     static const lv_point_t btn_points[2] = {
             {10, 10},   /*Button 0 -> x:10; y:10*/
             {40, 100},  /*Button 1 -> x:40; y:100*/
+
     };
     lv_indev_set_button_points(indev_button, btn_points);
+#endif
+
 }
 
 /**********************
@@ -183,25 +194,67 @@ void lv_port_indev_init(void)
 /*------------------
  * Touchpad
  * -----------------*/
+/****************************************************************************/
+/* Function Name : tpevt_cb_func                                            */
+/* Explanation   : touch event callback function                            */
+/* PARAMETERS    : [IN]nId        : event ID                                */
+/*               : [IN]psTouchEvt : touch information                       */
+/* RETURNS       : none                                                     */
+/* NOTES         : Especially, none.                                        */
+/****************************************************************************/
+static void tpevt_cb_func( int_t nId, TP_TouchEvent_st* psTouchEvt )
+{
+    UNUSED_PARAM(nId);
+    os_msg_t msg;
+    uint32_t disp_x = psTouchEvt->sFinger[0].unPosX;
+    uint32_t disp_y = psTouchEvt->sFinger[0].unPosY;
 
+    printf("Touch: x = %-4d, y = %-4d", (int)disp_x, (int)disp_y);
+
+    // Send touch
+    gui_touch.eState = psTouchEvt->sFinger[0].eState;
+    gui_touch.unPosX = disp_x;
+    gui_touch.unPosY = disp_y;
+    R_OS_PutMessageQueue( q_msg_touch, (os_msg_t) &gui_touch );
+
+    switch(psTouchEvt->sFinger[0].eState)
+    {
+        case TPEVT_ENTRY_UP:
+            /* Code here move up */
+            break;
+        case TPEVT_ENTRY_DOWN:
+        	/* Code here move udown */
+            break;
+        case TPEVT_ENTRY_MOVE:
+        	/* Code here move */
+            break;
+        default:
+            break;
+    }
+
+}
+/***********************************************************************************************************************
+ End of function touch_task
+ ***********************************************************************************************************************/
 /*Initialize your touchpad*/
 static void touchpad_init(void)
 {
-	/* initialise capacitive touch screen */
+	/* Initialize capacitive touch screen */
 	TouchPanel_Init();
 
-	/* initialize screen */
-	R_TOUCH_init_screen();
-
 	/* open the I2C channel1 driver */
-	if(0 > TouchPanel_Open(GRAPHICS_LAYER_WIDTH, GRAPHICS_LAYER_HEIGHT, TP_INT_PRI, TP_TSK_PRI, R_OS_ABSTRACTION_PRV_DEFAULT_STACK_SIZE))
+	if(0 > TouchPanel_Open(LV_HOR_RES_MAX, LV_VER_RES_MAX, TP_INT_PRI, TP_TSK_PRI, R_OS_ABSTRACTION_PRV_DEFAULT_STACK_SIZE))
 	{
-		fprintf(pCom->p_out, "I2c driver can not loaded, demo not possible\r\n");
+		printf("I2c driver can not loaded, demo not possible\r\n");
 	}
 	else
 	{
-		fprintf(pCom->p_out, "I2c driver loaded initializing demo\r\n");
-		TouchPanel_EventEntry(TPEVT_ENTRY_ALL, 0, 0, GRAPHICS_LAYER_WIDTH, GRAPHICS_LAYER_HEIGHT, &tpevt_cb_func);
+		printf("I2c driver loaded initializing demo\r\n");
+		TouchPanel_EventEntry(TPEVT_ENTRY_ALL, 0, 0, LV_HOR_RES_MAX, LV_VER_RES_MAX, &tpevt_cb_func);
+
+		R_OS_CreateMessageQueue( 5, q_msg_touch );
+
+
 	}
 }
 
@@ -230,9 +283,12 @@ static bool touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
 /*Return true is the touchpad is pressed*/
 static bool touchpad_is_pressed(void)
 {
+	bool retval = false;
     /*Your code comes here*/
-
-    return false;
+	os_msg_t msg;
+	if (R_OS_GetMessageQueue( q_msg_touch, &msg, 0, false)) // Non Blocking
+		retval = true;
+    return retval;
 }
 
 /*Get the x and y coordinates if the touchpad is pressed*/
@@ -240,8 +296,8 @@ static void touchpad_get_xy(lv_coord_t * x, lv_coord_t * y)
 {
     /*Your code comes here*/
 
-    (*x) = 0;
-    (*y) = 0;
+    (*x) = gui_touch.unPosX;
+    (*y) = gui_touch.unPosY;
 }
 
 
@@ -305,7 +361,7 @@ static bool keypad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
     static uint32_t last_key = 0;
 
     /*Get the current x and y coordinates*/
-    mouse_get_xy(&data->point.x, &data->point.y);
+    touchpad_get_xy(&data->point.x, &data->point.y);
 
     /*Get whether the a key is pressed and save the pressed key*/
     uint32_t act_key = keypad_get_key();
@@ -440,9 +496,6 @@ static bool button_is_pressed(uint8_t id)
     return false;
 }
 
-static void tpevt_cb_func( int_t nId, TP_TouchEvent_st* psTouchEvt ) {
-
-}
 
 #else /* Enable this file at the top */
 
