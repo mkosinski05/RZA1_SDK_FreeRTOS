@@ -81,7 +81,7 @@ void lv_log_add(lv_log_level_t level, const char * file, int line, const char * 
 #else
 #define LV_LOG_TRACE(dsc)                                                                                              \
     {                                                                                                                  \
-        ;                                                                                                              \
+		printf("TRACE : %s", dsc);                                                                                                              \
     }
 #endif
 
@@ -90,7 +90,7 @@ void lv_log_add(lv_log_level_t level, const char * file, int line, const char * 
 #else
 #define LV_LOG_INFO(dsc)                                                                                               \
     {                                                                                                                  \
-        ;                                                                                                              \
+		printf("INFO : %s", dsc);                                                                                                              \
     }
 #endif
 
@@ -99,7 +99,7 @@ void lv_log_add(lv_log_level_t level, const char * file, int line, const char * 
 #else
 #define LV_LOG_WARN(dsc)                                                                                               \
     {                                                                                                                  \
-        ;                                                                                                              \
+		printf("WARNING : %s", dsc);                                                                                                              \
     }
 #endif
 
@@ -108,7 +108,7 @@ void lv_log_add(lv_log_level_t level, const char * file, int line, const char * 
 #else
 #define LV_LOG_ERROR(dsc)                                                                                              \
     {                                                                                                                  \
-        ;                                                                                                              \
+		printf("ERROR : %s", dsc);                                                                                                              \
     }
 #endif
 
@@ -121,19 +121,19 @@ void lv_log_add(lv_log_level_t level, const char * file, int line, const char * 
     }
 #define LV_LOG_TRACE(dsc)                                                                                              \
     {                                                                                                                  \
-	printf("TRACE : %s", dsc);;                                                                                                              \
+		;                                                                                                            \
     }
 #define LV_LOG_INFO(dsc)                                                                                               \
     {                                                                                                                  \
-	printf("INFO : %s", dsc);;                                                                                                              \
+		;                                                                                                              \
     }
 #define LV_LOG_WARN(dsc)                                                                                               \
     {                                                                                                                  \
-        printf("WARNING : %s", dsc);                                                                                                              \
+        ;                                                                                                              \
     }
 #define LV_LOG_ERROR(dsc)                                                                                              \
     {                                                                                                                  \
-	printf("ERROR : %s", dsc);;                                                                                                              \
+		;                                                                                                              \
     }
 #endif /*LV_USE_LOG*/
 

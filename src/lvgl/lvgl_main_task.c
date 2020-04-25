@@ -58,6 +58,7 @@ static void prvLittlevGLTask( void *pvParameters ) {
 
 	while (1) {
 		// Called every millisecond by the
+		lv_tick_inc(1);
 		lv_task_handler();
 		R_OS_TaskSleep(1);
 	}

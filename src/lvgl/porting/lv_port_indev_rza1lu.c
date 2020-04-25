@@ -67,7 +67,7 @@ lv_indev_t * indev_button;
 static int32_t encoder_diff;
 static lv_indev_state_t encoder_state;
 
-os_msg_queue_handle_t q_msg_touch;
+semaphore_t semp_msg_touch;
 TP_TouchFinger_st gui_touch;
 
 /**********************
@@ -215,7 +215,7 @@ static void tpevt_cb_func( int_t nId, TP_TouchEvent_st* psTouchEvt )
     gui_touch.eState = psTouchEvt->sFinger[0].eState;
     gui_touch.unPosX = disp_x;
     gui_touch.unPosY = disp_y;
-    R_OS_PutMessageQueue( q_msg_touch, (os_msg_t) &gui_touch );
+    R_OS_ReleaseSemaphore( semp_msg_touch );
 
     switch(psTouchEvt->sFinger[0].eState)
     {
@@ -252,7 +252,7 @@ static void touchpad_init(void)
 		printf("I2c driver loaded initializing demo\r\n");
 		TouchPanel_EventEntry(TPEVT_ENTRY_ALL, 0, 0, LV_HOR_RES_MAX, LV_VER_RES_MAX, &tpevt_cb_func);
 
-		R_OS_CreateMessageQueue( 5, q_msg_touch );
+		R_OS_CreateSemaphore( &semp_msg_touch, 0 );
 
 
 	}
@@ -286,7 +286,7 @@ static bool touchpad_is_pressed(void)
 	bool retval = false;
     /*Your code comes here*/
 	os_msg_t msg;
-	if (R_OS_GetMessageQueue( q_msg_touch, &msg, 0, false)) // Non Blocking
+	if (R_OS_WaitForSemaphore( semp_msg_touch, 0)) // Non Blocking
 		retval = true;
     return retval;
 }
