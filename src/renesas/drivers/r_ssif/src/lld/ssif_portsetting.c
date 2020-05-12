@@ -32,7 +32,8 @@
 Includes <System Includes>, "Project Includes"
 *******************************************************************************/
 #include "ssif_if.h"
-#include "gpio_iodefine.h"
+//#include "gpio_iodefine.h"
+#include "r_port_sc_cfg.h"
 #include "mcu_board_select.h"
 #include "Renesas_RZ_A1.h"
 
@@ -149,6 +150,7 @@ int_t SSIF_PortSetting(const uint32_t ssif_ch)
             GPIO.PM4    &= (uint16_t)~(GPIO_BIT_N7);
 
 #elif (TARGET_BOARD == TARGET_BOARD_STREAM_IT2)
+#if 0
             /* SSISCK0:  P6_8, Alt3(010), Input/Output */
             GPIO.PIBC6  &= (uint16_t)~(GPIO_BIT_N8);
             GPIO.PBDC6  &= (uint16_t)~(GPIO_BIT_N8);
@@ -209,6 +211,12 @@ int_t SSIF_PortSetting(const uint32_t ssif_ch)
 
             GPIO.PMC6   |= (uint16_t) (GPIO_BIT_N10);
             GPIO.PM6    &= (uint16_t)~(GPIO_BIT_N10);
+#else
+            set_pin_function( &GPIO_SC_TABLE_rssi0[0]);
+            set_pin_function( &GPIO_SC_TABLE_rssi0[1]);
+            set_pin_function( &GPIO_SC_TABLE_rssi0[2]);
+            set_pin_function( &GPIO_SC_TABLE_rssi0[3]);
+#endif
 #else
             /* no connection */
 #endif

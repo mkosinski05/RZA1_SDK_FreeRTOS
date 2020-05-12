@@ -249,6 +249,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/renesas/drivers/r_vdc_vdec/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/renesas/drivers/r_wdt/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/renesas/drivers/r_eeprom/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/renesas/drivers/r_gpio/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/renesas/middleware/cmos/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/renesas/middleware/fatfs/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/renesas/middleware/lwip_ethernet/inc&quot;"/>

@@ -37,6 +37,7 @@
 #include "cpg_iobitmask.h"
 #include "r_vdc_portsetting.h"
 #include "rza_io_regrw.h"
+#include "r_port_sc_cfg.h"
 
 /******************************************************************************
  Macro definitions
@@ -150,6 +151,7 @@ void VDC_LcdPortSetting(uint32_t param)
     reg_data = GPIO.PMC10;
 
 #elif (TARGET_BOARD == TARGET_BOARD_STREAM_IT2)
+
     /* Stream it! TFT 4.3 (RGB565)
      Panel clock : LCD0_CLK              ... P7_4,   6th alternative function
      DE          : LCD0_TCON2            ... P8_10,  1th alternative function
@@ -159,7 +161,7 @@ void VDC_LcdPortSetting(uint32_t param)
      LCD0_DATA   : LCD0_DATA[15:8]       ... P6_7 ~ P6_0,    2th alternative function
                  : LCD0_DATA[7:0]        ... P8_7 ~ P8_0,    1th alternative function
      */
-
+#if 0
     /* Port 6 */
     reg_data = ((uint32_t) GPIO.PMC6 & (uint32_t) ~LCD_PORT6_2TH);
     GPIO.PMC6 = (uint16_t) reg_data;
@@ -218,6 +220,11 @@ void VDC_LcdPortSetting(uint32_t param)
     reg_data = ((uint32_t) GPIO.PMC8 | (uint32_t)LCD_PORT8_1TH);
     GPIO.PMC8 = (uint16_t) reg_data;
     reg_data = GPIO.PMC8;
+#else
+    for (int i = 0; i < 20; i++ ){
+    	set_pin_function( &GPIO_SC_TABLE_rvdc0[i]);
+    }
+#endif
 
     /* Standby out I2C ch1 for QE coworking */
     /* ==== Module standby clear ==== */
@@ -230,6 +237,7 @@ void VDC_LcdPortSetting(uint32_t param)
     CPG_STBCR9_MSTP96_SHIFT, CPG_STBCR9_MSTP96);
 
     (void) dummy_read;
+
 
 #endif
 } /* End of function VDC5_LcdPortSetting() */
