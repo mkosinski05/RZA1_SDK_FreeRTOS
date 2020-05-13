@@ -36,6 +36,7 @@
 /******************************************************************************
  Includes   <System Includes> , "Project Includes"
  ******************************************************************************/
+#include <stddef.h>
 #include "gpio_addrdefine.h"
 #include "r_port_if.h"
 
@@ -56,11 +57,23 @@
  ******************************************************************************/
 static void pin_function(PinName pin, int function, PinDirection dir);
 
-void set_pin_function ( const PinMap *map) {
-	if (sizeof(PinMap) <= sizeof(map)) {
+
+void set_pin_function ( const st_port_config_t *map) {
+	if (sizeof(st_port_config_t) <= sizeof(map)) {
 		pin_function(map->pin, map->function, map->dir);
 	}
 }
+
+void set_pins_function( const st_port_init_config_t *maps) {
+	uint8_t count = 0;
+	if ( maps != NULL ){
+		count = maps->count;
+		for (int i = 0; i < count; i++){
+			set_pin_function(maps->p_config_table);
+		}
+	}
+}
+
 static void pin_function(PinName pin, int function, PinDirection dir) {
 
 	int shift = pin & 0xF;

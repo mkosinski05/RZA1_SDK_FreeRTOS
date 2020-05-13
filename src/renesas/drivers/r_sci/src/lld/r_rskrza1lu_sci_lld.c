@@ -201,8 +201,7 @@ int_t   R_SCI_InitialiseHwIf(e_sc_id_t id)
         GPIO.PFCAE7 |= GPIO_PFCAE7_PFCAE710;
         GPIO.PIPC7 |= GPIO_PIPC7_PIPC710;
 #else
-        set_pin_function( &GPIO_SC_TABLE_rsci3[0]);
-        set_pin_function( &GPIO_SC_TABLE_rsci3[1]);
+        set_pins_function( &GPIO_SC_INIT_scf3);
 #endif
 
         /* Enable SCIF3 module */

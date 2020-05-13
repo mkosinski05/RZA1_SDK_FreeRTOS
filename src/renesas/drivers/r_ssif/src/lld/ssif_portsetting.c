@@ -212,10 +212,8 @@ int_t SSIF_PortSetting(const uint32_t ssif_ch)
             GPIO.PMC6   |= (uint16_t) (GPIO_BIT_N10);
             GPIO.PM6    &= (uint16_t)~(GPIO_BIT_N10);
 #else
-            set_pin_function( &GPIO_SC_TABLE_rssi0[0]);
-            set_pin_function( &GPIO_SC_TABLE_rssi0[1]);
-            set_pin_function( &GPIO_SC_TABLE_rssi0[2]);
-            set_pin_function( &GPIO_SC_TABLE_rssi0[3]);
+            set_pins_function( &GPIO_SC_INIT_ssi0);
+
 #endif
 #else
             /* no connection */

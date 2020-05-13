@@ -668,8 +668,7 @@ static void channel0_port_init (void)
     rza_io_reg_write_16( &GPIO.PMC1, 1, GPIO_PMC1_PMC11_SHIFT, GPIO_PMC1_PMC11);
 #else
 
-    set_pin_function( &GPIO_SC_TABLE_riic0[0]);
-    set_pin_function( &GPIO_SC_TABLE_riic0[1]);
+    set_pins_function( &GPIO_SC_INIT_i2c0);
 #endif
 }
 /*******************************************************************************
@@ -721,8 +720,8 @@ static void channel1_port_init (void)
     rza_io_reg_write_16( &GPIO.PMC1, 1, GPIO_PMC1_PMC13_SHIFT, GPIO_PMC1_PMC13);
 #else
 
-    set_pin_function( &GPIO_SC_TABLE_riic1[0]);
-    set_pin_function( &GPIO_SC_TABLE_riic1[1]);
+    set_pin_function( &GPIO_SC_TABLE_i2c1[0]);
+    set_pin_function( &GPIO_SC_TABLE_i2c1[1]);
 #endif
 }
 /*******************************************************************************

@@ -221,9 +221,8 @@ void VDC_LcdPortSetting(uint32_t param)
     GPIO.PMC8 = (uint16_t) reg_data;
     reg_data = GPIO.PMC8;
 #else
-    for (int i = 0; i < 20; i++ ){
-    	set_pin_function( &GPIO_SC_TABLE_rvdc0[i]);
-    }
+    set_pins_function( &GPIO_SC_INIT_vdc);
+
 #endif
 
     /* Standby out I2C ch1 for QE coworking */

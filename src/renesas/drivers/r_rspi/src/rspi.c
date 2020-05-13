@@ -162,10 +162,10 @@ static void port_settings(void)
     /* MISO2  : no connection */
 #else
 
-    set_pin_function(&GPIO_SC_TABLE_rspi0[0]);
-    set_pin_function(&GPIO_SC_TABLE_rspi0[1]);
-    set_pin_function(&GPIO_SC_TABLE_rspi0[2]);
-    set_pin_function(&GPIO_SC_TABLE_rspi0[3]);
+    set_pins_function(&GPIO_SC_INIT_rspi0);
+
+    set_pin_function(&GPIO_SC_TABLE_irq[0]);
+
     gpio_init(P3_15); gpio_dir(P3_15, PIN_OUTPUT); gpio_write(P3_15, 1);
     gpio_init(P9_5);  gpio_dir(P9_5,  PIN_OUTPUT);
     gpio_init(P6_13); gpio_dir(P6_13, PIN_OUTPUT);
