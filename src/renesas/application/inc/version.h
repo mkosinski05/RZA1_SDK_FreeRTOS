@@ -57,7 +57,7 @@ Macro definitions
 ******************************************************************************/
 #define APPLICATION_INFO_VERSION          3
 #define APPLICATION_INFO_RELEASE          1
-#define APPLICATION_INFO_BUILD            204
+#define APPLICATION_INFO_BUILD            211
 
 
 

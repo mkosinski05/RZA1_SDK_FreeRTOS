@@ -82,10 +82,11 @@ static const st_port_init_config_t GPIO_SC_INIT_rspi0 = { 0,	0,	&GPIO_SC_TABLE_r
 static const st_port_config_t GPIO_SC_TABLE_rspi1[] =
 {
 	{P6_12,	FUNCTION_MODE3,	PIN_IO},	// Pin Function : RSPCK1
+	{P6_13,	FUNCTION_MODE3,	PIN_IO},	// Pin Function : SSL10
 	{P6_15,	FUNCTION_MODE3,	PIN_IO},	// Pin Function : MISO1
 	{P6_14,	FUNCTION_MODE3,	PIN_IO},	// Pin Function : MOSI1
 };
-static const st_port_init_config_t GPIO_SC_INIT_rspi1 = { 0,	3,	&GPIO_SC_TABLE_rspi1[0]	};
+static const st_port_init_config_t GPIO_SC_INIT_rspi1 = { 0,	4,	&GPIO_SC_TABLE_rspi1[0]	};
 static const st_port_config_t GPIO_SC_TABLE_rspi2[] =
 {
 };
@@ -136,9 +137,8 @@ static const st_port_config_t GPIO_SC_TABLE_ssi3[] =
 static const st_port_init_config_t GPIO_SC_INIT_ssi3 = { 0,	0,	&GPIO_SC_TABLE_ssi3[0]	};
 static const st_port_config_t GPIO_SC_TABLE_irq[] =
 {
-	{P1_9,	FUNCTION_MODE2,	PIN_INPUT},	// Pin Function : IRQ1
 };
-static const st_port_init_config_t GPIO_SC_INIT_irq = { 0,	1,	&GPIO_SC_TABLE_irq[0]	};
+static const st_port_init_config_t GPIO_SC_INIT_irq = { 0,	0,	&GPIO_SC_TABLE_irq[0]	};
 static const st_port_config_t GPIO_SC_TABLE_mlb[] =
 {
 };
@@ -186,7 +186,7 @@ static const st_port_config_t GPIO_SC_TABLE_vdc[] =
 	{P6_1,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA9
 	{P6_0,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA8
 	{P8_7,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : LCD0_DATA7
-	{P3_6,	FUNCTION_MODE3,	PIN_OUTPUT},	// Pin Function : LCD0_DATA6
+	{P8_6,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : LCD0_DATA6
 	{P6_5,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA13
 	{P6_6,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA14
 	{P6_7,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA15
@@ -203,17 +203,65 @@ static const st_port_config_t GPIO_SC_TABLE_ceu[] =
 {
 };
 static const st_port_init_config_t GPIO_SC_INIT_ceu = { 0,	0,	&GPIO_SC_TABLE_ceu[0]	};
-static const st_port_config_t GPIO_SC_TABLE_sd[] =
+static const st_port_config_t GPIO_SC_TABLE_sd0[] =
 {
 };
-static const st_port_init_config_t GPIO_SC_INIT_sd = { 0,	0,	&GPIO_SC_TABLE_sd[0]	};
+static const st_port_init_config_t GPIO_SC_INIT_sd0 = { 0,	0,	&GPIO_SC_TABLE_sd0[0]	};
+static const st_port_config_t GPIO_SC_TABLE_sd1[] =
+{
+	{P7_0,	FUNCTION_MODE3,	PIN_INPUT},	// Pin Function : SD_CD_1
+	{P7_6,	FUNCTION_MODE3,	PIN_IO},	// Pin Function : SD_D3_1
+	{P7_7,	FUNCTION_MODE3,	PIN_IO},	// Pin Function : SD_D2_1
+	{P7_2,	FUNCTION_MODE3,	PIN_IO},	// Pin Function : SD_D1_1
+	{P7_3,	FUNCTION_MODE3,	PIN_IO},	// Pin Function : SD_D0_1
+	{P7_5,	FUNCTION_MODE3,	PIN_IO},	// Pin Function : SD_CMD_1
+};
+static const st_port_init_config_t GPIO_SC_INIT_sd1 = { 0,	6,	&GPIO_SC_TABLE_sd1[0]	};
 static const st_port_config_t GPIO_SC_TABLE_mmc[] =
 {
 };
 static const st_port_init_config_t GPIO_SC_INIT_mmc = { 0,	0,	&GPIO_SC_TABLE_mmc[0]	};
 static const st_port_config_t GPIO_SC_TABLE_bsc[] =
 {
+	{P3_0,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A1
+	{P3_1,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A2
+	{P3_2,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A3
+	{P3_3,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A4
+	{P3_4,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A5
+	{P3_5,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A6
+	{P3_6,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A7
+	{P3_7,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A8
+	{P3_8,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A9
+	{P5_0,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D0
+	{P5_1,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D1
+	{P5_2,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D2
+	{P5_3,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D3
+	{P5_4,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D4
+	{P5_5,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D5
+	{P5_6,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D6
+	{P5_7,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D7
+	{P5_8,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D8
+	{P5_9,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D9
+	{P2_6,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : RD/WR#
+	{P2_1,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : RAS#
+	{P2_3,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : CKE
+	{P5_10,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D10
+	{P5_12,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D12
+	{P5_11,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D11
+	{P5_14,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D14
+	{P5_13,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D13
+	{P5_15,	FUNCTION_MODE1,	PIN_IO},	// Pin Function : D15
+	{P2_4,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : WE0#/DQMLL
+	{P3_9,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A10
+	{P3_10,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A11
+	{P3_11,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A12
+	{P3_12,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A13
+	{P3_13,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A14
+	{P3_14,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : A15
+	{P2_5,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : WE1#/WE#/DQMLU
+	{P2_0,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : CS3#
+	{P2_2,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : CAS#
 };
-static const st_port_init_config_t GPIO_SC_INIT_bsc = { 0,	0,	&GPIO_SC_TABLE_bsc[0]	};
+static const st_port_init_config_t GPIO_SC_INIT_bsc = { 0,	38,	&GPIO_SC_TABLE_bsc[0]	};
 
 /* End of File */

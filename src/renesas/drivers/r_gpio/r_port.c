@@ -66,10 +66,13 @@ void set_pin_function ( const st_port_config_t *map) {
 
 void set_pins_function( const st_port_init_config_t *maps) {
 	uint8_t count = 0;
+	st_port_config_t* pFunc;
 	if ( maps != NULL ){
 		count = maps->count;
+		pFunc = maps->p_config_table;
 		for (int i = 0; i < count; i++){
-			set_pin_function(maps->p_config_table);
+			set_pin_function(pFunc);
+			pFunc++;
 		}
 	}
 }
