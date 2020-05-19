@@ -19,9 +19,12 @@ class sc_parser:
     def __init__(self, filename):
         self.filename = filename
 
+        # Parse the SC xml file
         self.sc_parser()
+        # Seperate GPIO and Port Functions
         self.sort_info()
 
+        # Add Alternate and direction from PinMap
         for f in self.peripherials:
             f = self.rza1_getAlternateMode(f)
 
@@ -82,6 +85,7 @@ class sc_parser:
                     func['Alternate'] = int(f['Alter'])
                     func['Direction'] = f['DIR']
 
+
         else:
             print("Error pin: " + pin + " does not exist")
 
@@ -105,8 +109,11 @@ class sc_parser:
                 else:
                     self.deviceCode[dev] = []
                 """
-                entry = "\t{"+p['Port']+',\t'+'FUNCTION_MODE'+str(p['Alternate'])+',\tPIN_'+p['Direction']+'},\t// Pin Function : '+p['Id']+'\n'
-                self.deviceCode[dev].append(entry)
+                try:
+                    entry = "\t{"+p['Port']+',\t'+'FUNCTION_MODE'+str(p['Alternate'])+',\tPIN_'+p['Direction']+'},\t// Pin Function : '+p['Id']+'\n'
+                    self.deviceCode[dev].append(entry)
+                except:
+                    print("Error Key "+str(p))
             else:
                 print("Error no function "+p['Id'])
         # print(self.deviceCode)
