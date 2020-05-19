@@ -82,7 +82,7 @@
 #define R_SELF_INSERT_APP_PMOD (R_OPTION_DISABLE)
 
 /** Enable control for src/application/app_sound sample application */
-#define R_SELF_INSERT_APP_SOUND (R_OPTION_DISABLE)
+#define R_SELF_INSERT_APP_SOUND (R_OPTION_ENABLE)
 
 /** Enable control for src/application/app_touchscreen sample application */
 #define R_SELF_INSERT_APP_TOUCH_SCREEN (R_OPTION_DISABLE)

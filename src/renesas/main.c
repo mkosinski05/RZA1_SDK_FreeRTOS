@@ -35,6 +35,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>
+#include <r_soundbar_app.h>
 
 #include "compiler_settings.h"
 
@@ -49,6 +50,7 @@
 
 #include "r_task_priority.h"
 #include "main.h"
+
 int_t g_led_handle = ( -1);
 bool_t dma_available = false;
 
@@ -106,6 +108,7 @@ int_t main (void)
     /* open LED driver */
     g_led_handle = open( DEVICE_INDENTIFIER "led", O_RDWR);
 
+
 #if R_SELF_BLINK_TASK_CREATION
     /* Create a task to blink the LED */
     p_os_task = R_OS_CreateTask("Blink", blink_task, NULL, R_OS_ABSTRACTION_PRV_DEFAULT_STACK_SIZE, TASK_BLINK_TASK_PRI);
@@ -116,7 +119,11 @@ int_t main (void)
         /* Debug message */
     }
 #endif
-    lvgl_start();
+    // Sound Test 1 Play
+    //R_SOUND_PlaySample();
+    // Sound Test 2 Loop Test
+    R_SOUND_RecordSample();
+    //lvgl_start();
  
     /* Need to determine system state is running */
     if (R_OS_GetNumberOfTasks())
