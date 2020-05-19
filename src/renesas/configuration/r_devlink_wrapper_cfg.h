@@ -188,7 +188,10 @@ static st_mount_table_t gs_mount_table[] =
 
 #if R_SELF_INSERT_APP_SOUND
    /** ssif serial sound driver added by USER */
-   {"ssif", (st_r_driver_t *)&g_ssif_driver, R_SC0},
+   {"ssif0", (st_r_driver_t *)&g_ssif_driver, R_SC0},
+   {"ssif1", (st_r_driver_t *)&g_ssif_driver, R_SC1},
+   {"ssif2", (st_r_driver_t *)&g_ssif_driver, R_SC2},
+   {"ssif3", (st_r_driver_t *)&g_ssif_driver, R_SC3},
 #endif
 
  /* End of user modification */
