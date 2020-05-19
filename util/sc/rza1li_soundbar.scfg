@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<smc>
+<general version="2.0.0.0">
+<configuration active="true" id="com.renesas.smc.toolchain.gnuarm.configuration.release">
+<property id="com.renesas.smc.service.project.buildArtefactType" values="com.renesas.smc.service.project.buildArtefactType.exe"/>
+<toolchain id="com.renesas.smc.toolchain.gnuarm.noneeabi">
+<option id="com.renesas.smc.toolchain.option.rtos" key="com.renesas.smc.toolchain.option.rtos.none">
+<item id="com.renesas.smc.toolchain.option.rtos.freertos" value=""/>
+</option>
+</toolchain>
+</configuration>
+<platform id="R7S721031VLFP"/>
+<option id="board" value="Custom User Board"/>
+</general>
+<tool id="Pins" version="1.0.1.0">
+<pinItem allocation="62" comments="" direction="None" id="RxD3" status="0"/>
+<pinItem allocation="63" comments="" direction="None" id="TxD3" status="0"/>
+<pinItem allocation="46" comments="" direction="None" id="SSIWS2" status="0"/>
+<pinItem allocation="38" comments="" direction="None" id="SSIWS0" status="0"/>
+<pinItem allocation="48" comments="" direction="None" id="SSIDATA2" status="0"/>
+<pinItem allocation="33" comments="" direction="None" id="SSISCK0" status="0"/>
+<pinItem allocation="43" comments="" direction="None" id="SSISCK2" status="0"/>
+<pinItem allocation="41" comments="" direction="None" id="SSIRxD0" status="0"/>
+<pinItem allocation="40" comments="" direction="None" id="SSITxD0" status="0"/>
+<pinItem allocation="150" comments="" direction="None" id="RIIC0SDA" status="0"/>
+<pinItem allocation="149" comments="" direction="None" id="RIIC0SCL" status="0"/>
+<pinItem allocation="151" comments="" direction="None" id="RIIC1SCL" status="0"/>
+<pinItem allocation="152" comments="" direction="None" id="RIIC1SDA" status="0"/>
+</tool>
+</smc>
