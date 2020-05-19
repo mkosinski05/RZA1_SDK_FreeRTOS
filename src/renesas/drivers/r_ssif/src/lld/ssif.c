@@ -167,7 +167,7 @@ int_t SSIF_Initialise(const ssif_channel_cfg_t* const p_cfg_data)
 * @param         none
 * @retval        DEVDRV_SUCCESS   :Success.
 ******************************************************************************/
-int_t SSIF_UnInitialise(void)
+int_t SSIF_UnInitialiseAll(void)
 {
     uint32_t        ssif_ch;
     const int_t     ercd = DEVDRV_SUCCESS;
@@ -185,7 +185,17 @@ int_t SSIF_UnInitialise(void)
 
     return ercd;
 }
+int_t SSIF_UnInitialise(int_t ssif_ch)
+{
+    const int_t     ercd = DEVDRV_SUCCESS;
+    ssif_info_ch_t* p_info_ch;
 
+    p_info_ch = &g_ssif_info_drv.info_ch[ssif_ch];
+    SSIF_UnInitChannel(p_info_ch);
+
+
+    return ercd;
+}
 /******************************************************************************
 * Function Name: SSIF_EnableChannel
 * @brief         Enable the SSIF channel
