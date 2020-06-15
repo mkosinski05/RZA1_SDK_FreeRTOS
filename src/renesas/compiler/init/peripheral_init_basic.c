@@ -47,6 +47,7 @@ Includes   <System Includes> , "Project Includes"
 
 /* Interchangeable compiler specific header */
 #include "compiler_settings.h"
+#include "r_port_sc_cfg.h"
 
 
 /*******************************************************************************
@@ -70,6 +71,7 @@ void R_INIT_PeripheralBasic(void)
 {
     /* ==== CPG setting ====*/
     cpg_init() ;
+    //set_pins_function( &GPIO_SC_INIT_bsc);
 }
 /*******************************************************************************
  End of function R_INIT_PeripheralBasic

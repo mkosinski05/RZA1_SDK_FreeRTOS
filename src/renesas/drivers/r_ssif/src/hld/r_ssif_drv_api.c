@@ -65,7 +65,7 @@ static int_t ssif_write (st_stream_ptr_t pStream, uint8_t *pbyBuffer, uint32_t u
 static int_t ssif_read (st_stream_ptr_t pStream, uint8_t *pbyBuffer, uint32_t uiCount);
 
 /* SSIF Initialise functions */
-static void *ssif_init (void * const config_data, int32_t * const p_errno);
+static void *ssif_init (int_t channel, void * const config_data, int32_t * const p_errno);
 static int_t ssif_un_init (int_t channel, void * const driver_instance, int32_t * const p_errno);
 static int_t configure_ssif_channel (int_t channel);
 static int_t rssif_get_channel(st_stream_ptr_t stream_ptr);
@@ -509,7 +509,7 @@ static int_t ssif_get_version (st_stream_ptr_t pStream, st_ver_info_t *pVerInfo)
  * @retval        DEVDRV_SUCCESS        :Success.
  * @retval        DEVDRV_ERROR          :Failure.
  ******************************************************************************/
-static void *ssif_init (void * const p_config_data, int32_t * const p_errno)
+static void *ssif_init (int_t channel, void * const p_config_data, int32_t * const p_errno)
 {
     /* Unused parameter */
     (void) p_errno;
@@ -523,17 +523,18 @@ static void *ssif_init (void * const p_config_data, int32_t * const p_errno)
     if (NULL == p_config_data)
     {
         ercd = DEVDRV_ERROR;
-    }
-    else if (SSIF_DRVSTS_UNINIT != g_ssif_info_drv.drv_stat)
-    {
+    //}
+    //else if (SSIF_DRVSTS_UNINIT != g_ssif_info_drv.drv_stat)
+    //{
         ercd = DEVDRV_ERROR;
+    //}
     }
     else
     {
         g_ssif_info_drv.drv_stat = SSIF_DRVSTS_INIT;
 
         /* cast to ssif_channel_cfg_t pointer */
-        ercd = SSIF_Initialise((ssif_channel_cfg_t *) p_config_data);
+        ercd = SSIF_Initialise(channel, (ssif_channel_cfg_t *) p_config_data);
 
         if (DEVDRV_SUCCESS == ercd)
         {
@@ -623,7 +624,7 @@ static int_t configure_ssif_channel (int_t channel)
     gs_ssif_cfg[channel].enabled = true;
 
     /* initialise driver data structures */
-    p_info_drv = ssif_init( &gs_ssif_cfg, NULL);
+    p_info_drv = ssif_init( channel, &gs_ssif_cfg[channel], NULL);
 
     /* Casting NULL */
     if (NULL == p_info_drv)

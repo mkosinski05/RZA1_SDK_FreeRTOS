@@ -287,7 +287,7 @@ extern volatile struct st_ssif* const g_ssireg[SSIF_NUM_CHANS];
  * @return    DEVDRV_SUCCESS   :Success.
  *            error code :Failure.
  **/
-int_t SSIF_Initialise(const ssif_channel_cfg_t* const p_cfg_data);
+int_t SSIF_Initialise(int_t channel, const ssif_channel_cfg_t* const p_cfg_data);
 
 /**
  * @brief UnInitialize the SSIF driver's internal data

@@ -585,6 +585,7 @@ static void play_recorded (void)
 
     else
     {
+    	memset (p_wavebuf_non_aligned, 0, ((WAVE_DMA_SIZE_PRV_ * NUM_AUDIO_BUFFER_BLOCKS_PRV_) + WAVEDATA_STORAGE_ALIGN_BYTES_PRV_));
         /* The buffer used needs to be aligned to WAVEDATA_STORAGE_ALIGN_BYTES_PRV_ in order for DMA to work.
          * Aligned by clearing lower bits of pointer then adding the alignment size.
          * The malloc for the buffer area has taken this alignment process into account. */
