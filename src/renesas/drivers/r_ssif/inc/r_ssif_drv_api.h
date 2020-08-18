@@ -123,6 +123,9 @@ extern const st_r_driver_t g_ssif_driver;
 /** Unique ID. Assigned by requirements */
     #define R_SSIF_RZ_HLD_UID                (00)
 
+	#define SSIF_LLD_SUPPORTED_CHANNELS ((e_channel_id_t) (R_CH0 | R_CH1 | R_CH2))
+	#define SSIF_LLD_NUM_CHANNELS           (2)
+
 /* Control Codes */
 /** Control codes for SSIF Driver */
 typedef enum

@@ -55,7 +55,7 @@ Exported global variables (to be accessed by other files)
 Private global variables and functions
 *******************************************************************************/
 
-static int_t R_SSIF_UnInit(void* const driver_instance, int32_t* const p_errno);
+static int_t R_SSIF_UnInit(int_t channel, void* const driver_instance, int32_t* const p_errno);
 static int_t R_SSIF_Open(void* const p_driver_instance, const char_t* const p_path_name, const int_t flags, const int_t mode, int32_t* const p_errno);
 static int_t R_SSIF_Close(void* const p_fd, int32_t* const p_errno);
 static int_t R_SSIF_Ioctl(void* const p_fd, const int_t request, void* const p_buf, int32_t* const p_errno);
@@ -158,7 +158,7 @@ Private functions
 * @retval        IOIF_ESUCCESS        :Success.
 * @retval        IOIF_EERROR          :Failure.
 ******************************************************************************/
-static int_t R_SSIF_UnInit(void* const driver_instance, int32_t* const p_errno)
+static int_t R_SSIF_UnInit(int_t channel, void* const driver_instance, int32_t* const p_errno)
 {
     int_t   ercd;
     int_t   ret = IOIF_ESUCCESS;
@@ -176,7 +176,7 @@ static int_t R_SSIF_UnInit(void* const driver_instance, int32_t* const p_errno)
         }
         else
         {
-            ercd = SSIF_UnInitialise();
+            ercd = SSIF_UnInitialise(channel);
             p_info_drv->drv_stat = SSIF_DRVSTS_UNINIT;
         }
     }

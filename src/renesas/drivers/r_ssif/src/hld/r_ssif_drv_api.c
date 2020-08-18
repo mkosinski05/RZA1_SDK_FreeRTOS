@@ -47,6 +47,7 @@
 #include "FreeRTOS.h"
 #include "ssif.h"
 #include "dev_drv.h"
+#include "r_ssif_config.h"
 
 /* Adding this dependency ensures that this file is built every time because of the build counter */
 #include "version.h"
@@ -64,9 +65,10 @@ static int_t ssif_write (st_stream_ptr_t pStream, uint8_t *pbyBuffer, uint32_t u
 static int_t ssif_read (st_stream_ptr_t pStream, uint8_t *pbyBuffer, uint32_t uiCount);
 
 /* SSIF Initialise functions */
-static void *ssif_init (void * const config_data, int32_t * const p_errno);
-static int_t ssif_un_init (void * const driver_instance, int32_t * const p_errno);
+static void *ssif_init (int_t channel, void * const config_data, int32_t * const p_errno);
+static int_t ssif_un_init (int_t channel, void * const driver_instance, int32_t * const p_errno);
 static int_t configure_ssif_channel (int_t channel);
+static int_t rssif_get_channel(st_stream_ptr_t stream_ptr);
 
 /*****************************************************************************
  Constant Data
@@ -89,7 +91,7 @@ static AIOCB *gsp_aio_w = NULL;
 static ssif_info_ch_t *gsp_info_ch = (ssif_info_ch_t *)NULL;
 
 /* Configured Inputs to Open */
-static ssif_channel_cfg_t gs_ssif_cfg[SSIF_NUM_CHANS];
+extern ssif_channel_cfg_t gs_ssif_cfg[SSIF_NUM_CHANS];
 
 /* Define the driver function table for this */
 const st_r_driver_t g_ssif_driver =
@@ -106,35 +108,44 @@ extern ssif_info_drv_t g_ssif_info_drv;
 static int_t ssif_open (st_stream_ptr_t pStream)
 {
     int_t ercd = DEVDRV_SUCCESS;
+    int_t channel = rssif_get_channel(pStream);
 
-    /* Configure SSIF Channel 0. 4 channels available (0-3) */
-    configure_ssif_channel(SSIF_CHNUM_0);
+    /* fail if pStream has wrong name */
+	if ((DEVDRV_ERROR) == channel)
+	{
+		ercd = DEVDRV_ERROR;
+	}
+	else
+	{
+		/* Configure SSIF Channel 0. 4 channels available (0-3) */
+		configure_ssif_channel(channel);
 
-    /* get access to channel to enable it */
-    if (false == R_OS_WaitForSemaphore( &gsp_info_ch->sem_access, R_OS_ABSTRACTION_PRV_EV_WAIT_INFINITE))
-    {
-        ercd = DEVDRV_ERROR;
-    }
-    else
-    {
+		/* get access to channel to enable it */
+		if (false == R_OS_WaitForSemaphore( &gsp_info_ch->sem_access, R_OS_ABSTRACTION_PRV_EV_WAIT_INFINITE))
+		{
+			ercd = DEVDRV_ERROR;
+		}
+		else
+		{
 
-        gsp_info_ch->openflag = pStream->file_flag;
+			gsp_info_ch->openflag = pStream->file_flag;
 
-        /* Initialise the tx buffer element */
-        gsp_info_ch->p_aio_tx_curr = NULL;
+			/* Initialise the tx buffer element */
+			gsp_info_ch->p_aio_tx_curr = NULL;
 
-        /* Initialise the rx buffer element */
-        gsp_info_ch->p_aio_rx_curr = NULL;
+			/* Initialise the rx buffer element */
+			gsp_info_ch->p_aio_rx_curr = NULL;
 
-        ercd = SSIF_EnableChannel(gsp_info_ch);
-        if (DEVDRV_SUCCESS == ercd)
-        {
-            gsp_info_ch->ch_stat = SSIF_CHSTS_OPEN;
-        }
+			ercd = SSIF_EnableChannel(gsp_info_ch);
+			if (DEVDRV_SUCCESS == ercd)
+			{
+				gsp_info_ch->ch_stat = SSIF_CHSTS_OPEN;
+			}
 
-    }
+		}
 
-    R_OS_ReleaseSemaphore( &gsp_info_ch->sem_access);
+		R_OS_ReleaseSemaphore( &gsp_info_ch->sem_access);
+	}
 
     return (ercd);
 }
@@ -155,44 +166,56 @@ static void ssif_close (st_stream_ptr_t pStream)
     (void) pStream;
 
     int32_t ercd = DEVDRV_SUCCESS;
+    int_t channel = rssif_get_channel(pStream);
 
-    ercd = ssif_un_init( &g_ssif_info_drv, &ercd);
+	/* fail if pStream has wrong name */
+	if ((DEVDRV_ERROR) == channel)
+	{
+		ercd = DEVDRV_ERROR;
+	}
+	else
+	{
+		gsp_info_ch = &g_ssif_info_drv.info_ch[channel];
 
-    /* Ensure that there is a drive to close */
-    if ((NULL == gsp_info_ch) || (DEVDRV_SUCCESS != ercd))
-    {
-        ercd = DEVDRV_ERROR;
-    }
-    else
-    {
-        /* Get semaphore to access the channel data */
-        if (false == R_OS_WaitForSemaphore( &gsp_info_ch->sem_access, R_OS_ABSTRACTION_PRV_EV_WAIT_INFINITE))
-        {
-            ercd = DEVDRV_ERROR;
-        }
-        else
-        {
-            if (SSIF_CHSTS_OPEN != gsp_info_ch->ch_stat)
-            {
-                ercd = DEVDRV_ERROR;
-            }
-            else
-            {
-                /* No p_errno not required */
-                SSIF_PostAsyncCancel(gsp_info_ch, NULL);
 
-                ercd = SSIF_DisableChannel(gsp_info_ch);
+		ercd = ssif_un_init( channel, &g_ssif_info_drv, &ercd);
 
-                if (DEVDRV_SUCCESS == ercd)
-                {
-                    gsp_info_ch->ch_stat = SSIF_CHSTS_INIT;
-                }
-            }
+		/* Ensure that there is a drive to close */
+		if ((NULL == gsp_info_ch) || (DEVDRV_SUCCESS != ercd))
+		{
+			ercd = DEVDRV_ERROR;
+		}
+		else
+		{
+			/* Get semaphore to access the channel data */
+			if (false == R_OS_WaitForSemaphore( &gsp_info_ch->sem_access, R_OS_ABSTRACTION_PRV_EV_WAIT_INFINITE))
+			{
+				ercd = DEVDRV_ERROR;
+			}
+			else
+			{
+				if (SSIF_CHSTS_OPEN != gsp_info_ch->ch_stat)
+				{
+					ercd = DEVDRV_ERROR;
+				}
+				else
+				{
+					/* No p_errno not required */
+					SSIF_PostAsyncCancel(gsp_info_ch, NULL);
 
-            /* Release semaphore */
-            R_OS_ReleaseSemaphore( &gsp_info_ch->sem_access);
-        }
-    }
+					ercd = SSIF_DisableChannel(gsp_info_ch);
+
+					if (DEVDRV_SUCCESS == ercd)
+					{
+						gsp_info_ch->ch_stat = SSIF_CHSTS_INIT;
+					}
+				}
+
+				/* Release semaphore */
+				R_OS_ReleaseSemaphore( &gsp_info_ch->sem_access);
+			}
+		}
+	}
 }
 /******************************************************************************
  End of function  ssif_close
@@ -210,82 +233,94 @@ static int_t ssif_control (st_stream_ptr_t pStream, uint32_t ctlCode, void *pCtl
 {
     int_t result = DEVDRV_ERROR;
 
-    /* Avoid unused parameter compiler warning */
-    (void) pStream;
-    if (pCtlStruct)
-    {
-        switch (ctlCode)
-        {
-            case R_SSIF_CONTROL_CONFIGURE:
-            {
-                st_r_ssif_drv_control_t *p_control_struct = pCtlStruct;
+    int_t channel = rssif_get_channel(pStream);
 
-                /* Comparison with NULL */
-                if (NULL == p_control_struct->p_buf)
-                {
-                    result = DEVDRV_ERROR;
-                }
-                else
-                {
-                    ssif_channel_cfg_t * const p_new_ch_info = p_control_struct->p_buf;
-                    result = SSIF_IOCTL_ConfigChannel(gsp_info_ch, p_new_ch_info);
-                    if (DEVDRV_SUCCESS != result)
-                    {
-                        result = DEVDRV_ERROR;
-                    }
-                }
-                break;
-            }
+	/* fail if pStream has wrong name */
+	if ((DEVDRV_ERROR) == channel)
+	{
+		result = DEVDRV_ERROR;
+	}
+	else
+	{
+		gsp_info_ch = &g_ssif_info_drv.info_ch[channel];
 
-            case R_SSIF_CONTROL_STATUS:
-            {
-                st_r_ssif_drv_control_t *p_control_struct = pCtlStruct;
+		/* Avoid unused parameter compiler warning */
+		(void) pStream;
+		if (pCtlStruct)
+		{
+			switch (ctlCode)
+			{
+				case R_SSIF_CONTROL_CONFIGURE:
+				{
+					st_r_ssif_drv_control_t *p_control_struct = pCtlStruct;
 
-                /* Comparison with NULL */
-                if (NULL == p_control_struct->p_buf)
-                {
-                    result = DEVDRV_ERROR;
-                }
-                else
-                {
-                    result = SSIF_IOCTL_GetStatus(gsp_info_ch, p_control_struct->p_buf);
-                    if (DEVDRV_SUCCESS != result)
-                    {
-                        result = DEVDRV_ERROR;
-                    }
-                }
-                break;
-            }
-            case R_SSIF_CONTROL_CANCEL:
-            {
-                /* nothing */
-                ;
-            }
-            break;
+					/* Comparison with NULL */
+					if (NULL == p_control_struct->p_buf)
+					{
+						result = DEVDRV_ERROR;
+					}
+					else
+					{
+						ssif_channel_cfg_t * const p_new_ch_info = p_control_struct->p_buf;
+						result = SSIF_IOCTL_ConfigChannel(gsp_info_ch, p_new_ch_info);
+						if (DEVDRV_SUCCESS != result)
+						{
+							result = DEVDRV_ERROR;
+						}
+					}
+					break;
+				}
 
-            case R_SSIF_AIO_READ_CONTROL:
-            {
-                /* point to read setup */
-                gsp_aio_r = (AIOCB *) pCtlStruct;
-                result = DEVDRV_SUCCESS;
-            }
-            break;
+				case R_SSIF_CONTROL_STATUS:
+				{
+					st_r_ssif_drv_control_t *p_control_struct = pCtlStruct;
 
-            case R_SSIF_AIO_WRITE_CONTROL:
-            {
-                /* point to write setup */
-                gsp_aio_w = (AIOCB *) pCtlStruct;
-                result = DEVDRV_SUCCESS;
-            }
-            break;
+					/* Comparison with NULL */
+					if (NULL == p_control_struct->p_buf)
+					{
+						result = DEVDRV_ERROR;
+					}
+					else
+					{
+						result = SSIF_IOCTL_GetStatus(gsp_info_ch, p_control_struct->p_buf);
+						if (DEVDRV_SUCCESS != result)
+						{
+							result = DEVDRV_ERROR;
+						}
+					}
+					break;
+				}
+				case R_SSIF_CONTROL_CANCEL:
+				{
+					/* nothing */
+					;
+				}
+				break;
 
-            default:
-            {
-                result = DEVDRV_ERROR;
-                break;
-            }
-        }
-    }
+				case R_SSIF_AIO_READ_CONTROL:
+				{
+					/* point to read setup */
+					gsp_aio_r = (AIOCB *) pCtlStruct;
+					result = DEVDRV_SUCCESS;
+				}
+				break;
+
+				case R_SSIF_AIO_WRITE_CONTROL:
+				{
+					/* point to write setup */
+					gsp_aio_w = (AIOCB *) pCtlStruct;
+					result = DEVDRV_SUCCESS;
+				}
+				break;
+
+				default:
+				{
+					result = DEVDRV_ERROR;
+					break;
+				}
+			}
+		}
+	}
     return result;
 }
 /******************************************************************************
@@ -309,47 +344,59 @@ static int_t ssif_write (st_stream_ptr_t pStream, uint8_t *pbyBuffer, uint32_t u
 
     int_t ercd = DEVDRV_SUCCESS;
 
-    /* Ensure writing is allowed */
-    if (O_RDONLY != pStream->file_flag)
-    {
+    int_t channel = rssif_get_channel(pStream);
 
-        /* Ensure that the ssif is configured correctly */
-        if ((NULL == gsp_info_ch) || (NULL == gsp_aio_w))
-        {
-            ercd = DEVDRV_ERROR;
-        }
-        else
-        {
-            /* Validate parameters */
-            if ((0u == uiCount) || (NULL == pbyBuffer))
-            {
-                ercd = DEVDRV_ERROR;
-            }
-            else
-            {
-                /* update file descriptor field with pointer to channel configuration */
-                gsp_aio_w->aio_fildes = (int) gsp_info_ch;
+	/* fail if pStream has wrong name */
+	if ((DEVDRV_ERROR) == channel)
+	{
+		ercd = DEVDRV_ERROR;
+	}
+	else
+	{
+		gsp_info_ch = &g_ssif_info_drv.info_ch[channel];
 
-                /* Enable callback on message */
-                gsp_aio_w->aio_sigevent.sigev_notify = SIGEV_THREAD;
+		/* Ensure writing is allowed */
+		if (O_RDONLY != pStream->file_flag)
+		{
 
-                /* set operation type */
-                gsp_aio_w->aio_return = SSIF_ASYNC_W;
+			/* Ensure that the ssif is configured correctly */
+			if ((NULL == gsp_info_ch) || (NULL == gsp_aio_w))
+			{
+				ercd = DEVDRV_ERROR;
+			}
+			else
+			{
+				/* Validate parameters */
+				if ((0u == uiCount) || (NULL == pbyBuffer))
+				{
+					ercd = DEVDRV_ERROR;
+				}
+				else
+				{
+					/* update file descriptor field with pointer to channel configuration */
+					gsp_aio_w->aio_fildes = (int) gsp_info_ch;
 
-                /* number of bytes */
-                gsp_aio_w->aio_nbytes = uiCount;
+					/* Enable callback on message */
+					gsp_aio_w->aio_sigevent.sigev_notify = SIGEV_THREAD;
 
-                /* pointer to buffer */
-                gsp_aio_w->aio_buf = (void *) pbyBuffer;
+					/* set operation type */
+					gsp_aio_w->aio_return = SSIF_ASYNC_W;
 
-                /* pass message to config structure */
-                gsp_info_ch->p_aio_tx_next = gsp_aio_w;
+					/* number of bytes */
+					gsp_aio_w->aio_nbytes = uiCount;
 
-                /* Go! */
-                SSIF_PostAsyncIo(gsp_info_ch, gsp_aio_w);
-            }
-        }
-    }
+					/* pointer to buffer */
+					gsp_aio_w->aio_buf = (void *) pbyBuffer;
+
+					/* pass message to config structure */
+					gsp_info_ch->p_aio_tx_next = gsp_aio_w;
+
+					/* Go! */
+					SSIF_PostAsyncIo(gsp_info_ch, gsp_aio_w);
+				}
+			}
+		}
+	}
 
     return ercd;
 }
@@ -373,39 +420,50 @@ static int_t ssif_read (st_stream_ptr_t pStream, uint8_t *pbyBuffer, uint32_t ui
 {
     int_t ercd = DEVDRV_SUCCESS;
 
-    /* Ensure reading is allowed */
-    if (O_WRONLY != pStream->file_flag)
-    {
+    int_t channel = rssif_get_channel(pStream);
 
-        /* Ensure that the driver is configured */
-        if ((NULL == gsp_info_ch) || (NULL == gsp_aio_r))
-        {
-            ercd = DEVDRV_ERROR;
-        }
-        else
-        {
-            /* update file descriptor field with pointer to channel configuration */
-            gsp_aio_r->aio_fildes = (int) gsp_info_ch;
+	/* fail if pStream has wrong name */
+	if ((DEVDRV_ERROR) == channel)
+	{
+		ercd = DEVDRV_ERROR;
+	}
+	else
+	{
+		gsp_info_ch = &g_ssif_info_drv.info_ch[channel];
+    	/* Ensure reading is allowed */
+		if (O_WRONLY != pStream->file_flag)
+		{
 
-            /* Enable callback on message */
-            gsp_aio_r->aio_sigevent.sigev_notify = SIGEV_THREAD;
+			/* Ensure that the driver is configured */
+			if ((NULL == gsp_info_ch) || (NULL == gsp_aio_r))
+			{
+				ercd = DEVDRV_ERROR;
+			}
+			else
+			{
+				/* update file descriptor field with pointer to channel configuration */
+				gsp_aio_r->aio_fildes = (int) gsp_info_ch;
 
-            /* set operation type */
-            gsp_aio_r->aio_return = SSIF_ASYNC_R;
+				/* Enable callback on message */
+				gsp_aio_r->aio_sigevent.sigev_notify = SIGEV_THREAD;
 
-            /* number of bytes */
-            gsp_aio_r->aio_nbytes = uiCount;
+				/* set operation type */
+				gsp_aio_r->aio_return = SSIF_ASYNC_R;
 
-            /* pointer to buffer */
-            gsp_aio_r->aio_buf = (void *) pbyBuffer;
+				/* number of bytes */
+				gsp_aio_r->aio_nbytes = uiCount;
 
-            /* pass message to config structure */
-            gsp_info_ch->p_aio_rx_next = gsp_aio_r;
+				/* pointer to buffer */
+				gsp_aio_r->aio_buf = (void *) pbyBuffer;
 
-            /* Go! */
-            SSIF_PostAsyncIo(gsp_info_ch, gsp_aio_r);
-        }
-    }
+				/* pass message to config structure */
+				gsp_info_ch->p_aio_rx_next = gsp_aio_r;
+
+				/* Go! */
+				SSIF_PostAsyncIo(gsp_info_ch, gsp_aio_r);
+			}
+		}
+	}
 
     return ercd;
 }
@@ -451,7 +509,7 @@ static int_t ssif_get_version (st_stream_ptr_t pStream, st_ver_info_t *pVerInfo)
  * @retval        DEVDRV_SUCCESS        :Success.
  * @retval        DEVDRV_ERROR          :Failure.
  ******************************************************************************/
-static void *ssif_init (void * const p_config_data, int32_t * const p_errno)
+static void *ssif_init (int_t channel, void * const p_config_data, int32_t * const p_errno)
 {
     /* Unused parameter */
     (void) p_errno;
@@ -465,17 +523,18 @@ static void *ssif_init (void * const p_config_data, int32_t * const p_errno)
     if (NULL == p_config_data)
     {
         ercd = DEVDRV_ERROR;
-    }
-    else if (SSIF_DRVSTS_UNINIT != g_ssif_info_drv.drv_stat)
-    {
+    //}
+    //else if (SSIF_DRVSTS_UNINIT != g_ssif_info_drv.drv_stat)
+    //{
         ercd = DEVDRV_ERROR;
+    //}
     }
     else
     {
         g_ssif_info_drv.drv_stat = SSIF_DRVSTS_INIT;
 
         /* cast to ssif_channel_cfg_t pointer */
-        ercd = SSIF_Initialise((ssif_channel_cfg_t *) p_config_data);
+        ercd = SSIF_Initialise(channel, (ssif_channel_cfg_t *) p_config_data);
 
         if (DEVDRV_SUCCESS == ercd)
         {
@@ -512,7 +571,7 @@ static void *ssif_init (void * const p_config_data, int32_t * const p_errno)
  * @retval        DEVDRV_SUCCESS        :Success.
  * @retval        DEVDRV_ERROR          :Failure.
  ******************************************************************************/
-static int_t ssif_un_init (void * const driver_instance, int32_t * const p_errno)
+static int_t ssif_un_init (int_t channel, void * const driver_instance, int32_t * const p_errno)
 {
     /* Unused parameter */
     (void) p_errno;
@@ -534,7 +593,7 @@ static int_t ssif_un_init (void * const driver_instance, int32_t * const p_errno
         }
         else
         {
-            ercd = SSIF_UnInitialise();
+            ercd = SSIF_UnInitialise(channel);
             p_info_drv->drv_stat = SSIF_DRVSTS_UNINIT;
         }
     }
@@ -563,24 +622,9 @@ static int_t configure_ssif_channel (int_t channel)
     int_t ecrd = DEVDRV_SUCCESS;
 
     gs_ssif_cfg[channel].enabled = true;
-    gs_ssif_cfg[channel].int_level = ISR_SSIF_IRQ_PRIORITY;
-    gs_ssif_cfg[channel].slave_mode = false;
-    gs_ssif_cfg[channel].sample_freq = 44100u;
-    gs_ssif_cfg[channel].clk_select = SSIF_CFG_CKS_AUDIO_X1;
-    gs_ssif_cfg[channel].multi_ch = SSIF_CFG_MULTI_CH_1;
-    gs_ssif_cfg[channel].data_word = SSIF_CFG_DATA_WORD_16;
-    gs_ssif_cfg[channel].system_word = SSIF_CFG_SYSTEM_WORD_32;
-    gs_ssif_cfg[channel].bclk_pol = SSIF_CFG_FALLING;
-    gs_ssif_cfg[channel].ws_pol = SSIF_CFG_WS_LOW;
-    gs_ssif_cfg[channel].padding_pol = SSIF_CFG_PADDING_LOW;
-    gs_ssif_cfg[channel].serial_alignment = SSIF_CFG_DATA_FIRST;
-    gs_ssif_cfg[channel].parallel_alignment = SSIF_CFG_LEFT;
-    gs_ssif_cfg[channel].ws_delay = SSIF_CFG_DELAY;
-    gs_ssif_cfg[channel].noise_cancel = SSIF_CFG_DISABLE_NOISE_CANCEL;
-    gs_ssif_cfg[channel].tdm_mode = SSIF_CFG_DISABLE_TDM;
 
     /* initialise driver data structures */
-    p_info_drv = ssif_init( &gs_ssif_cfg, NULL);
+    p_info_drv = ssif_init( channel, &gs_ssif_cfg[channel], NULL);
 
     /* Casting NULL */
     if (NULL == p_info_drv)
@@ -594,6 +638,43 @@ static int_t configure_ssif_channel (int_t channel)
     }
 
     return ecrd;
+}
+int_t rssif_get_channel(st_stream_ptr_t stream_ptr) {
+
+	int_t ret_value = DEVDRV_ERROR;
+	int_t channel_id;
+
+	if (NULL != stream_ptr)
+	{
+		/* cast channel id to an int_t */
+		channel_id = (int_t) (stream_ptr->sc_config_index);
+
+		/* verify that the channel is supported */
+
+		/* look for channel in the conglomeration  of available channels from low level driver */
+		/* (e_channel_id_t). This is a bitfield where the power of 2 is the available channel */
+		if (((1 << channel_id) <= R_CH15))
+		{
+			/* set channel as bitfield where value is 2 << channel */
+			int_t test1 = (1 << channel_id);
+
+			/* get bitfield of supported channels */
+			int_t test2 = SSIF_LLD_SUPPORTED_CHANNELS;
+			if (0 != (test1 & test2))
+			{
+				/* Channel is supported */
+				ret_value = (int_t) channel_id;
+			}
+			else
+			{
+				/* Channel is supported */
+				ret_value = DEVDRV_ERROR;
+			}
+		}
+	}
+
+	/* return status as error or channel number  */
+	return (ret_value);
 }
 /*******************************************************************************
  End of function configure_ssif_channel

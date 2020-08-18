@@ -111,7 +111,7 @@ Exported global functions (to be accessed by other files)
 * @retval        DEVDRV_SUCCESS   :Success.
 * @retval        error code :Failure.
 ******************************************************************************/
-int_t SSIF_Initialise(const ssif_channel_cfg_t* const p_cfg_data)
+int_t SSIF_Initialise(int_t channel, const ssif_channel_cfg_t* const p_cfg_data)
 {
     uint32_t        ssif_ch = 0;
     int_t           ercd = DEVDRV_SUCCESS;
@@ -123,35 +123,33 @@ int_t SSIF_Initialise(const ssif_channel_cfg_t* const p_cfg_data)
     }
     else
     {
-        for (ssif_ch = 0; (ssif_ch < SSIF_NUM_CHANS) && (DEVDRV_SUCCESS == ercd); ssif_ch++)
-        {
-            p_info_ch = &g_ssif_info_drv.info_ch[ssif_ch];
-            p_info_ch->channel = ssif_ch;
-            p_info_ch->enabled = p_cfg_data[ssif_ch].enabled;
 
-            if (false != p_info_ch->enabled)
-            {
-                /* copy config data to channel info */
-                ercd = SSIF_UpdateChannelConfig(p_info_ch, &p_cfg_data[ssif_ch]);
+		p_info_ch = &g_ssif_info_drv.info_ch[channel];
+		p_info_ch->channel = channel;
+		p_info_ch->enabled = p_cfg_data->enabled;
 
-                if (DEVDRV_SUCCESS == ercd)
-                {
-                    ercd = SSIF_InitChannel(p_info_ch);
-                }
-            }
-        }
+		if (false != p_info_ch->enabled)
+		{
+			/* copy config data to channel info */
+			ercd = SSIF_UpdateChannelConfig(p_info_ch, p_cfg_data);
+
+			if (DEVDRV_SUCCESS == ercd)
+			{
+				ercd = SSIF_InitChannel(p_info_ch);
+			}
+		}
+
 
         if (DEVDRV_SUCCESS == ercd)
         {
-            for (ssif_ch = 0; ssif_ch < SSIF_NUM_CHANS; ssif_ch++)
-            {
-                p_info_ch = &g_ssif_info_drv.info_ch[ssif_ch];
 
-                if (false != p_info_ch->enabled)
-                {
-                    SSIF_InterruptInit(ssif_ch, p_cfg_data[ssif_ch].int_level);
-                }
-            }
+			p_info_ch = &g_ssif_info_drv.info_ch[channel];
+
+			if (false != p_info_ch->enabled)
+			{
+				SSIF_InterruptInit(channel, p_cfg_data->int_level);
+			}
+
         }
     }
 
@@ -167,7 +165,7 @@ int_t SSIF_Initialise(const ssif_channel_cfg_t* const p_cfg_data)
 * @param         none
 * @retval        DEVDRV_SUCCESS   :Success.
 ******************************************************************************/
-int_t SSIF_UnInitialise(void)
+int_t SSIF_UnInitialiseAll(void)
 {
     uint32_t        ssif_ch;
     const int_t     ercd = DEVDRV_SUCCESS;
@@ -185,7 +183,17 @@ int_t SSIF_UnInitialise(void)
 
     return ercd;
 }
+int_t SSIF_UnInitialise(int_t ssif_ch)
+{
+    const int_t     ercd = DEVDRV_SUCCESS;
+    ssif_info_ch_t* p_info_ch;
 
+    p_info_ch = &g_ssif_info_drv.info_ch[ssif_ch];
+    SSIF_UnInitChannel(p_info_ch);
+
+
+    return ercd;
+}
 /******************************************************************************
 * Function Name: SSIF_EnableChannel
 * @brief         Enable the SSIF channel
