@@ -43,6 +43,8 @@
 #include "r_rskrza1h_riic_lld.h"    /* RIIC Low level Driver Header */
 #include "r_riic_drv_link.h"        /* high-low driver link */
 #include "r_riic_drv_sc_cfg.h"          /* smart configurator / driver variables */
+#include "r_port_sc_cfg.h"
+#include "r_port_if.h"
 
 /* Common configuration file for all ISR's */
 #include "r_task_priority.h"
@@ -626,6 +628,7 @@ static void setup_peripheral (int_t channel, uint32_t cks, uint32_t brl, uint32_
  **/
 static void channel0_port_init (void)
 {
+#if 0
     /* ---- P1_2 : SCL1 ---- */
     /* Port initialise */
     rza_io_reg_write_16( &GPIO.PIBC1, 0, GPIO_PIBC1_PIBC10_SHIFT, GPIO_PIBC1_PIBC10);
@@ -663,6 +666,10 @@ static void channel0_port_init (void)
     rza_io_reg_write_16( &GPIO.PFCAE1, 0, GPIO_PFCAE1_PFCAE11_SHIFT, GPIO_PFCAE1_PFCAE11);
     rza_io_reg_write_16( &GPIO.PIPC1, 1, GPIO_PIPC1_PIPC11_SHIFT, GPIO_PIPC1_PIPC11);
     rza_io_reg_write_16( &GPIO.PMC1, 1, GPIO_PMC1_PMC11_SHIFT, GPIO_PMC1_PMC11);
+#else
+
+    set_pins_function( &GPIO_SC_INIT_i2c0);
+#endif
 }
 /*******************************************************************************
  End of function channel0_port_init
@@ -673,6 +680,7 @@ static void channel0_port_init (void)
  **/
 static void channel1_port_init (void)
 {
+#if 0
     /* ---- P1_2 : SCL1 ---- */
     /* Port initialise */
     rza_io_reg_write_16( &GPIO.PIBC1, 0, GPIO_PIBC1_PIBC12_SHIFT, GPIO_PIBC1_PIBC12);
@@ -710,6 +718,10 @@ static void channel1_port_init (void)
     rza_io_reg_write_16( &GPIO.PFCAE1, 0, GPIO_PFCAE1_PFCAE13_SHIFT, GPIO_PFCAE1_PFCAE13);
     rza_io_reg_write_16( &GPIO.PIPC1, 1, GPIO_PIPC1_PIPC13_SHIFT, GPIO_PIPC1_PIPC13);
     rza_io_reg_write_16( &GPIO.PMC1, 1, GPIO_PMC1_PMC13_SHIFT, GPIO_PMC1_PMC13);
+#else
+
+    set_pins_function( &GPIO_SC_INIT_i2c1);
+#endif
 }
 /*******************************************************************************
  End of function channel1_port_init

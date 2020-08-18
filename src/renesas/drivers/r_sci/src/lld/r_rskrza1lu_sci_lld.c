@@ -47,9 +47,11 @@ Includes   <System Includes> , "Project Includes"
 
 #include "r_rskrza1lu_sci_lld.h"
 
-#include "gpio_iobitmask.h"
+//#include "gpio_iobitmask.h"
+#include "r_port_sc_cfg.h"
 #include "cpg_iobitmask.h"
 #include "scif_iobitmask.h"
+
 
 #include "r_intc.h"
 
@@ -183,7 +185,7 @@ int_t   R_SCI_InitialiseHwIf(e_sc_id_t id)
     if((-1) != res)
     {
         volatile unsigned char dummy;
-
+#if 0
         /* Configure the port pins for use by SCIF3 NEED SMART CONFIGURATOR  */
         /* TXD3 (P7_11) */
         GPIO.PMC7 |= GPIO_PMC7_PMC711;
@@ -198,6 +200,9 @@ int_t   R_SCI_InitialiseHwIf(e_sc_id_t id)
         GPIO.PFCE7 &=(uint16_t) (~GPIO_PFCE7_PFCE710);
         GPIO.PFCAE7 |= GPIO_PFCAE7_PFCAE710;
         GPIO.PIPC7 |= GPIO_PIPC7_PIPC710;
+#else
+        set_pins_function( &GPIO_SC_INIT_scf3);
+#endif
 
         /* Enable SCIF3 module */
         (*r_sci_device_config[res].cpg_reg) = (volatile uint8_t) (*r_sci_device_config[res].cpg_reg) & (uint8_t) ~(r_sci_device_config[res].cpg_stb_ctrl);
