@@ -33,6 +33,7 @@
 /* ->MISRA 18.4 : Pack unpack union */ /* ->SEC M1.6.2 */
 /* ->SEC M1.10.1 : Not magic number */
 
+#define GPIO_BASE  ((long)0xFCFE3000uL) /* GPIO */
 #define GPIO    (*(struct st_gpio    *)0xFCFE3004uL) /* GPIO */
 
 
