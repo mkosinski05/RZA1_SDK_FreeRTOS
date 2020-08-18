@@ -54,6 +54,8 @@ Includes
 /* Interchangeable compiler specific header */
 #include "compiler_settings.h"
 #include "Renesas_RZ_A1.h"
+#include "r_port_sc_cfg.h"
+#include "r_gpio_if.h"
 
 /******************************************************************************
 Global variables and functions
@@ -76,7 +78,7 @@ uint16_t  g_spi_tx_count;
 
 static void port_settings(void)
 {
-
+#if 0
     /* Set P1_9 as PMOD_IRQ1 IRQ1(ALT2) (input) for both PMOD connectors */
     GPIO.PM1    |= (uint16_t) GPIO_BIT_N9;
     GPIO.PMC1   |= (uint16_t) GPIO_BIT_N9;
@@ -158,6 +160,17 @@ static void port_settings(void)
     /* SSL20  : no connection */
     /* MOSI2  : no connection */
     /* MISO2  : no connection */
+#else
+
+    set_pins_function(&GPIO_SC_INIT_rspi0);
+
+    set_pin_function(&GPIO_SC_TABLE_irq[0]);
+
+    gpio_init(P3_15); gpio_dir(P3_15, PIN_OUTPUT); gpio_write(P3_15, 1);
+    gpio_init(P9_5);  gpio_dir(P9_5,  PIN_OUTPUT);
+    gpio_init(P6_13); gpio_dir(P6_13, PIN_OUTPUT);
+
+#endif
 }
 
 static void power_perhiperial(void)
