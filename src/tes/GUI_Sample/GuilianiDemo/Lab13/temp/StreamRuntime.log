@@ -1,0 +1,8 @@
+ERROR: CGUIResourceFileHandler::SetResourceFile: Could not open Resource file.
+INFO: ------------------------------------------------------------------------------
+INFO:  EVALUATION VERSION! Application will shutdown after 60 minutes
+INFO: ------------------------------------------------------------------------------
+ERROR: CFntWrapFreeType::LoadFont: Could not load font. No font registered for ID 3
+ERROR: CFntWrapFreeType::FindFontIDWithSameFont: The font for ID 3 was not registered. 
+ERROR: CFntWrapFreeType::FindFontIDWithSameFont: The font for ID 3 was not registered. 
+ERROR: CFntWrapFreeType::FindFontIDWithSameFont: The font for ID 3 was not registered. 

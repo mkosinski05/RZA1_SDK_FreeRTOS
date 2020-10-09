@@ -91,10 +91,10 @@
 #define R_SELF_INSERT_APP_SDK_CAMERA (R_OPTION_DISABLE)
 
 /** Enable control for src/application/app_gui sample application */
-#define R_SELF_INSERT_APP_GUI (R_OPTION_DISABLE)
+#define R_SELF_INSERT_APP_GUI (R_OPTION_ENABLE)
 
 /** Enable control to load /src/renesas/middleware/usb_host_controller */
-#define R_SELF_LOAD_MIDDLEWARE_USB_HOST_CONTROLLER (R_OPTION_DISABLE)
+#define R_SELF_LOAD_MIDDLEWARE_USB_HOST_CONTROLLER (R_OPTION_ENABLE)
 
 /** Enable file system support when R_SELF_LOAD_MIDDLEWARE_USB_HOST_CONTROLLER is enabled */
 #if R_SELF_LOAD_MIDDLEWARE_USB_HOST_CONTROLLER

@@ -2,15 +2,15 @@
 * DISCLAIMER
 * This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
 * No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
-* applicable laws, including copyright laws.
+* applicable laws, including copyright laws. 
 * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
 * OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
 * NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY
 * LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
 * INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
 * ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability
-* of this software. By using this software, you agree to the additional terms and conditions found by accessing the
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability 
+* of this software. By using this software, you agree to the additional terms and conditions found by accessing the 
 * following link:
 * http://www.renesas.com/disclaimer
 *
@@ -176,8 +176,28 @@ static const st_port_config_t GPIO_SC_TABLE_usb1[] =
 static const st_port_init_config_t GPIO_SC_INIT_usb1 = { 0,	0,	&GPIO_SC_TABLE_usb1[0]	};
 static const st_port_config_t GPIO_SC_TABLE_vdc[] =
 {
+	{P3_1,	FUNCTION_MODE3,	PIN_OUTPUT},	// Pin Function : LCD0_DATA1
+	{P3_0,	FUNCTION_MODE3,	PIN_OUTPUT},	// Pin Function : LCD0_DATA0
+	{P3_5,	FUNCTION_MODE3,	PIN_OUTPUT},	// Pin Function : LCD0_DATA5
+	{P3_4,	FUNCTION_MODE3,	PIN_OUTPUT},	// Pin Function : LCD0_DATA4
+	{P3_3,	FUNCTION_MODE3,	PIN_OUTPUT},	// Pin Function : LCD0_DATA3
+	{P3_2,	FUNCTION_MODE3,	PIN_OUTPUT},	// Pin Function : LCD0_DATA2
+	{P6_1,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA9
+	{P6_0,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA8
+	{P8_7,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : LCD0_DATA7
+	{P8_6,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : LCD0_DATA6
+	{P6_5,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA13
+	{P6_6,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA14
+	{P6_7,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA15
+	{P6_2,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA10
+	{P6_3,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA11
+	{P6_4,	FUNCTION_MODE2,	PIN_OUTPUT},	// Pin Function : LCD0_DATA12
+	{P7_4,	FUNCTION_MODE6,	PIN_OUTPUT},	// Pin Function : LCD0_CLK
+	{P8_10,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : LCD0_TCON2
+	{P8_9,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : LCD0_TCON1
+	{P8_8,	FUNCTION_MODE1,	PIN_OUTPUT},	// Pin Function : LCD0_TCON0
 };
-static const st_port_init_config_t GPIO_SC_INIT_vdc = { 0,	0,	&GPIO_SC_TABLE_vdc[0]	};
+static const st_port_init_config_t GPIO_SC_INIT_vdc = { 0,	20,	&GPIO_SC_TABLE_vdc[0]	};
 static const st_port_config_t GPIO_SC_TABLE_ceu[] =
 {
 };
@@ -196,8 +216,7 @@ static const st_port_config_t GPIO_SC_TABLE_mmc[] =
 static const st_port_init_config_t GPIO_SC_INIT_mmc = { 0,	0,	&GPIO_SC_TABLE_mmc[0]	};
 static const st_port_config_t GPIO_SC_TABLE_bsc[] =
 {
-	{P3_8,	FUNCTION_MODE3,	PIN_INPUT},	// Pin Function : AUDIO_CLK
 };
-static const st_port_init_config_t GPIO_SC_INIT_bsc = { 0,	1,	&GPIO_SC_TABLE_bsc[0]	};
+static const st_port_init_config_t GPIO_SC_INIT_bsc = { 0,	0,	&GPIO_SC_TABLE_bsc[0]	};
 
 /* End of File */

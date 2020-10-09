@@ -1,0 +1,12 @@
+#if !defined(USER_KEYBOARD_EVENT_TYPE_RESOURCE_H)
+#define USER_KEYBOARD_EVENT_TYPE_RESOURCE_H
+
+/**
+User-defined KeyboardEventType-Resources.
+Each entry has to look like:
+ENTRY(ET_USERKEYBOARDEVENTTYPE01)    \
+*/
+#define USER_KEYIDENTIFIER_TABLE
+
+
+#endif // USER_KEYBOARD_EVENT_TYPE_RESOURCE_H

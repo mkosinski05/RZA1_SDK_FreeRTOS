@@ -1,0 +1,54 @@
+#!/bin/bash
+#
+while true 
+  do     
+    echo -e "\033[32mPlease enter the abolute path of rootfs directory\033[0m"
+    read path_rootfs
+
+    echo -e "\033[32mIs this path correct?"
+    echo  -e "\033[32m$path_rootfs"
+    echo -e "y/n\033[0m"
+    read answer
+	
+    if [ "$answer" = y -o "$answer" = Y ]
+    then
+      break
+    fi
+  done
+	
+echo -e "\033[32mSearch libc.so\033[0m"
+path_libc=$(find $path_rootfs -name libc.so)
+
+if [[ -z "${path_libc}" ]];then
+echo "libc.so doesnt exist"
+else
+        echo $path_libc
+	grep -l -i home $path_libc
+	file_status=$?
+	if [ $file_status == 1 ]; then
+		sed -i "s!/lib/libc.so.6!${path_rootfs}/lib/libc.so.6!" $path_libc 
+		sed -i "s!/usr/lib/libc_nonshared.a!${path_rootfs}/usr/lib/libc_nonshared.a!" $path_libc
+		sed -i "s!/lib/ld-linux-armhf.so.3!${path_rootfs}/lib/ld-linux-armhf.so.3!" $path_libc 
+		echo -e "\033[31mFile libc.so changed\033[0m"
+	else
+		echo -e "\033[31mFile libc.so has already been changed\033[0m"
+	fi
+fi
+
+echo -e "\033[32mSearch libpthread.so\033[0m"
+path_libpthread=$(find $path_rootfs -name libpthread.so)
+
+if [[ -z "${path_libpthread}" ]];then
+echo "libpthread.so doesnt exist"
+else
+	grep -l -i home $path_libpthread
+	file_status=$?
+
+	if [ $file_status == 1 ]; then
+		sed -i "s!/lib/libpthread.so.0!${path_rootfs}/lib/libpthread.so.0!" $path_libpthread 
+		sed -i "s!/usr/lib/libpthread_nonshared.a!${path_rootfs}/usr/lib/libpthread_nonshared.a!" $path_libpthread 
+		echo -e "\033[31mFile libpthread.so changed\033[0m"
+	else
+		echo -e "\033[31mFile libpthread.so has already been changed\033[0m"
+	fi
+fi

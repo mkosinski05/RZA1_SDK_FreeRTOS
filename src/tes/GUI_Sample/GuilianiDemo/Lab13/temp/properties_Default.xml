@@ -1,0 +1,107 @@
+<Properties>
+<FileVersion>2</FileVersion>
+<IDofFirstProp>-16</IDofFirstProp>
+<PropertyCount>17</PropertyCount>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0xff000000</PropertyValue>
+<Comment>PropID -16</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0xff646464</PropertyValue>
+<Comment>PropID -15</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0xff7d7d7d</PropertyValue>
+<Comment>PropID -14</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0xffadadad</PropertyValue>
+<Comment>PropID -13</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0xff3d3d3d</PropertyValue>
+<Comment>PropID -12</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0xffdfdfdf</PropertyValue>
+<Comment>PropID -11</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0xffffffff</PropertyValue>
+<Comment>PropID -10</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0xff000000</PropertyValue>
+<Comment>PropID -9</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>0</Type>
+<PropertyValue>-1</PropertyValue>
+<Comment>PropID -8</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>1</Type>
+<PropertyValue>13.000000</PropertyValue>
+<Comment>PropID -7</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>1</Type>
+<PropertyValue>0.000000</PropertyValue>
+<Comment>PropID -6</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0xff999999</PropertyValue>
+<Comment>PropID -5</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0xff777777</PropertyValue>
+<Comment>PropID -4</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>0</Type>
+<PropertyValue>16</PropertyValue>
+<Comment>PropID -3</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>3</Type>
+<PropertyValue>0x80a6b6df</PropertyValue>
+<Comment>PropID -2</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>4</Type>
+<PropertyValue>0</PropertyValue>
+<Comment>PropID -1</Comment>
+</GlobalProp>
+<GlobalProp>
+<ClassVersion>1</ClassVersion>
+<Type>0</Type>
+<PropertyValue>0</PropertyValue>
+<Comment>PropID 0</Comment>
+</GlobalProp>
+</Properties>

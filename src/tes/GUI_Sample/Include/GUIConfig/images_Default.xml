@@ -1,0 +1,255 @@
+<Images>
+<FileVersion>1</FileVersion>
+<IDofFirstImage>-48</IDofFirstImage>
+<ImageCount>50</ImageCount>
+<Image>
+<ImagePath>images/Standard/FakeMouseCursor.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -48</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/GaugeNeedle.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -47</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/Gauge.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -46</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -45</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -44</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -43</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonGrayedout.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -42</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonStandard.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -41</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/InputFieldStandard.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -40</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/InputFieldHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -39</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/InputFieldFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -38</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/InputFieldGrayedout.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -37</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/PlaceHolder.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -36</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -35</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -34</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -33</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -32</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonGrayedout.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -31</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonStandard.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -30</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -29</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -28</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -27</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonGrayedout.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -26</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/ButtonStandard.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -25</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/SliderNormalBG.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -24</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/SliderNormalKnob.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -23</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/SliderHighlightedKnob.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -22</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/SliderPressedKnob.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -21</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBSelectedFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -20</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBSelectedHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -19</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBSelectedPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -18</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBSelectedNormal.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -17</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBSelectedGrayedOut.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -16</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBNotSelectedFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -15</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBNotSelectedHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -14</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBNotSelectedPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -13</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBNotSelectedNormal.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -12</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/RBNotSelectedGrayedOut.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -11</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxNotSelectedFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -10</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxNotSelectedHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -9</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxNotSelectedPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -8</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxNotSelectedNormal.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -7</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxNotSelectedGrayedOut.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -6</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxSelectedFocussed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -5</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxSelectedHighlighted.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -4</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxSelectedPressed.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -3</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxSelectedNormal.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -2</Comment>
+</Image>
+<Image>
+<ImagePath>images/Standard/CheckBoxSelectedGrayedOut.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID -1</Comment>
+</Image>
+<Image>
+<ImagePath></ImagePath>
+<Permanent>false</Permanent>
+<Comment>ImageID 0</Comment>
+</Image>
+<Image>
+<ImagePath>images/PB_Fill2.png</ImagePath>
+<Permanent>false</Permanent>
+<Comment>IMG_PB_FILL2 1</Comment>
+</Image>
+</Images>

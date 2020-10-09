@@ -34,8 +34,8 @@
  *****************************************************************************/
 
 /* Multiple inclusion prevention macro */
-#ifndef RENESAS_APPLICATION_APP_SOUND_INC_R_SOUNDBAR_H_
-#define RENESAS_APPLICATION_APP_SOUND_INC_R_SOUNDBAR_H_
+#ifndef RENESAS_APPLICATION_APP_SOUND_INC_R_SOUND_H_
+#define RENESAS_APPLICATION_APP_SOUND_INC_R_SOUND_H_
 
 /**************************************************************************//**
  * @ingroup R_SW_PKG_93_SOUND_APP
@@ -50,6 +50,12 @@ User Includes
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include "FreeRTOS.h"
+#include "r_os_abstraction_api.h"
+#include "queue.h"
+#include "r_task_priority.h"
+
+#include "ff.h"
 
 /******************************************************************************
 Typedefs
@@ -76,16 +82,19 @@ Public Functions
  * @param p_in : Standard input from console.
  * @param p_out : Standard output to console
  */
-extern void R_SOUND_PlaySample(void);
+void R_SOUND_PlaySample_init( QueueHandle_t q_AudioTrack );
+void R_SOUND_PlaySample(void);
+void R_SOUND_StopSample(void);
+int R_SOUND_LoadSample (FIL* fp );
 
 /**
  * @brief Run the record/playback Sound application
  * @param p_in : Standard input from console.
  * @param p_out : Standard output to console
  */
-extern void R_SOUND_RecordSample(void);
+void R_SOUND_RecordSample(FILE *p_in, FILE *p_out);
 
-#endif /* RENESAS_APPLICATION_APP_SOUND_INC_R_SOUNDBAR_H_ */
+#endif /* RENESAS_APPLICATION_APP_SOUND_INC_R_SOUND_H_ */
 /**************************************************************************//**
  * @} (end addtogroup)
  *****************************************************************************/

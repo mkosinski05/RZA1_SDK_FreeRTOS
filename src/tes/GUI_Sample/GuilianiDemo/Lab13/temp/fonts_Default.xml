@@ -1,0 +1,26 @@
+<Fonts>
+<FileVersion>1</FileVersion>
+<IDofFirstFont>-2</IDofFirstFont>
+<FontCount>3</FontCount>
+<Font>
+<FontPath>fonts/Standard/DejaVuSans.ttf</FontPath>
+<FontSize>18</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>true</Permanent>
+<Comment>FontID -2</Comment>
+</Font>
+<Font>
+<FontPath>fonts/Standard/OpenSans-Regular.ttf</FontPath>
+<FontSize>12</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>true</Permanent>
+<Comment>FontID -1</Comment>
+</Font>
+<Font>
+<FontPath></FontPath>
+<FontSize>0</FontSize>
+<FontStyle>0</FontStyle>
+<Permanent>true</Permanent>
+<Comment>FontID 0</Comment>
+</Font>
+</Fonts>

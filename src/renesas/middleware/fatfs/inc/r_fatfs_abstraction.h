@@ -172,7 +172,7 @@ typedef struct _DRIVEINFO
 } DRIVEINFO, *PDRIVEINFO;
 
 typedef struct _DRIVE *PDRIVE;
-typedef struct FIL *PFILE;
+typedef FIL *PFILE;
 
 extern PDRIVE p_drive_0;
 extern int sizeof_drive;
